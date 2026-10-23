@@ -1,0 +1,569 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body>
+<title>Rowan Cheung Social Playbook</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a production call sheet. Masthead, one strip of headline numbers, then one sheet per platform behind tabs, then the copy kit and the math. */
+:root{
+  --paper:#F6F7F3; --sheet:#FFFFFF; --ink:#13201B; --muted:#56665F; --line:#D8DED8;
+  --accent:#0C7650; --accent-soft:#E2F1EA; --amber:#9A6212; --amber-soft:#F7ECD9;
+  --heat0:#EEF1ED; --heat1:#BFE0CF; --heat2:#7CC3A0; --heat3:#2F9A6C; --heat4:#0C6143;
+  --display:"Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --body:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0E1412; --sheet:#151D1A; --ink:#E6EEE9; --muted:#9AABA3; --line:#2A3631;
+  --accent:#43C892; --accent-soft:#16352A; --amber:#E3AA52; --amber-soft:#3A2D17;
+  --heat0:#1B2420; --heat1:#1F4536; --heat2:#2B7254; --heat3:#3FA578; --heat4:#7BE0B2; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0E1412; --sheet:#151D1A; --ink:#E6EEE9; --muted:#9AABA3; --line:#2A3631;
+  --accent:#43C892; --accent-soft:#16352A; --amber:#E3AA52; --amber-soft:#3A2D17;
+  --heat0:#1B2420; --heat1:#1F4536; --heat2:#2B7254; --heat3:#3FA578; --heat4:#7BE0B2; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:19px;line-height:1.6;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 80px}
+h1,h2,h3{font-family:var(--display);line-height:1.12;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.3rem,5.4vw,3.9rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(1.6rem,3.2vw,2.2rem);font-weight:700}
+h3{font-size:1.25rem;font-weight:700}
+p{margin:0;max-width:68ch}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.label{font-family:var(--mono);font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.src{font-size:.85rem;color:var(--muted);max-width:none}
+.src a{color:var(--muted)}
+section{display:grid;gap:22px;margin-top:64px}
+
+/* masthead */
+.mast{display:grid;gap:18px;border-bottom:2px solid var(--ink);padding-bottom:28px}
+.slate{display:flex;flex-wrap:wrap;gap:10px 28px}
+.slate div{display:grid;gap:2px}
+.slate b{font-family:var(--mono);font-weight:500;font-size:.95rem}
+.thesis{font-size:1.32rem;line-height:1.5;max-width:60ch}
+.thesis em{font-style:normal;background:var(--accent-soft);padding:0 .2em;border-radius:3px}
+
+/* numbers strip */
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));border:1px solid var(--line);background:var(--sheet);border-radius:10px;overflow:hidden}
+.strip div{padding:18px 20px;display:grid;gap:4px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-width:0}
+.strip .n{font-family:var(--display);font-size:2.1rem;font-weight:800;font-variant-numeric:tabular-nums;line-height:1}
+.strip .k{font-size:.95rem;color:var(--muted);line-height:1.35}
+.strip .dead .n{color:var(--amber)}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.pillar{display:grid;gap:8px;align-content:start;padding-top:14px;border-top:3px solid var(--accent)}
+.pillar p{font-size:1.02rem}
+.pillar .ex{font-size:.92rem;color:var(--muted)}
+
+/* chain */
+.chain{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--sheet)}
+table{border-collapse:collapse;width:100%;font-size:1rem}
+th,td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--paper)}
+td.t{font-family:var(--mono);font-size:.92rem;white-space:nowrap;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:none}
+.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:.95rem;white-space:nowrap}
+
+/* heat */
+.heat{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--sheet);padding:18px}
+.hgrid{display:grid;grid-template-columns:96px repeat(24,minmax(22px,1fr));gap:3px;min-width:720px;align-items:center}
+.hgrid .rl{font-family:var(--mono);font-size:.82rem;color:var(--ink)}
+.hgrid .hl{font-family:var(--mono);font-size:.7rem;color:var(--muted);text-align:center}
+.cell{aspect-ratio:1;border-radius:3px;background:var(--heat0);display:grid;place-items:center;font-family:var(--mono);font-size:.66rem;color:var(--ink)}
+.c1{background:var(--heat1)}.c2{background:var(--heat2)}.c3{background:var(--heat3);color:var(--sheet)}.c4{background:var(--heat4);color:var(--sheet)}
+.legend{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:14px;font-size:.85rem;color:var(--muted)}
+.legend span{display:inline-flex;gap:6px;align-items:center}
+.legend i{width:14px;height:14px;border-radius:3px;display:inline-block}
+
+/* tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:2px solid var(--ink)}
+.tab{font:inherit;font-family:var(--display);font-weight:700;font-size:1.05rem;background:transparent;color:var(--muted);border:1px solid transparent;border-bottom:none;padding:10px 18px;border-radius:8px 8px 0 0;cursor:pointer;margin-bottom:-2px}
+.tab[aria-selected="true"]{background:var(--sheet);color:var(--ink);border-color:var(--ink);border-bottom:2px solid var(--sheet)}
+.tab small{font-family:var(--mono);font-weight:400;font-size:.75rem;margin-left:6px;color:var(--muted)}
+.panel{background:var(--sheet);border:1px solid var(--ink);border-top:none;border-radius:0 0 10px 10px;padding:28px;display:grid;gap:28px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;border:1px solid var(--line);border-radius:8px}
+.facts div{padding:14px 16px;display:grid;gap:4px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-width:0}
+.facts p{font-size:1rem}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px}
+.two>*{min-width:0;display:grid;gap:12px;align-content:start}
+ul.plain{margin:0;padding-left:1.1em;display:grid;gap:8px}
+ul.plain li{max-width:66ch}
+
+/* bars */
+.bars{display:grid;gap:10px}
+.bar{display:grid;grid-template-columns:minmax(150px,210px) 1fr auto;gap:12px;align-items:center;font-size:.95rem}
+button.bar{grid-template-columns:minmax(150px,210px) 1fr auto 20px;font:inherit;color:inherit;background:var(--sheet);border:1px solid var(--line);box-shadow:0 1px 0 var(--line);border-radius:8px;padding:6px 8px;text-align:left;cursor:pointer;width:100%}
+button.bar:hover{border-color:var(--accent);transform:translateX(2px)}
+button.bar .go{font-family:var(--mono);color:var(--accent);font-size:1.1rem;line-height:1}
+.hint{display:inline-flex;align-items:center;gap:8px;align-self:start;justify-self:start;font-family:var(--mono);font-size:.8rem;letter-spacing:.04em;color:var(--accent);background:var(--accent-soft);border:1px dashed var(--accent);border-radius:999px;padding:4px 12px}
+@media (prefers-reduced-motion:no-preference){.hint .hand{display:inline-block;animation:nudge 1.4s ease-in-out infinite}@keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(4px)}}}
+@media (max-width:560px){button.bar{grid-template-columns:1fr auto 20px}button.bar .track{grid-column:1/-1}}
+button.bar[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent)}
+.bar .track{height:14px;background:var(--heat0);border-radius:7px;overflow:hidden}
+.bar .fill{height:100%;background:var(--accent);border-radius:7px}
+.bar .v{font-family:var(--mono);font-size:.88rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* recipe */
+.recipe{position:relative;background:var(--paper);border:1px dashed var(--muted);border-radius:8px;padding:18px 18px 18px;font-family:var(--body);font-size:1rem;line-height:1.6;white-space:pre-wrap;overflow-x:auto}
+.copy{position:absolute;top:10px;right:10px;font:inherit;font-family:var(--mono);font-size:.76rem;background:var(--sheet);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:4px 10px;cursor:pointer}
+.copy:hover{border-color:var(--accent)}
+.flag{display:inline-block;font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:999px;background:var(--amber-soft);color:var(--amber);font-weight:500}
+.flag.ok{background:var(--accent-soft);color:var(--accent)}
+
+/* week */
+.week{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.day{background:var(--sheet);border:1px solid var(--line);border-radius:10px;padding:16px;display:grid;gap:8px;align-content:start}
+.day h3{font-size:1.1rem}
+.day p{font-size:.96rem}
+.day .when{font-family:var(--mono);font-size:.8rem;color:var(--accent)}
+
+/* math */
+details{background:var(--sheet);border:1px solid var(--line);border-radius:10px;padding:16px 20px}
+summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:1.1rem}
+.calc{display:grid;gap:10px;margin-top:14px;font-size:1rem}
+.calc div{display:grid;gap:2px}
+.calc code{font-family:var(--mono);font-size:.92rem;background:var(--paper);padding:2px 6px;border-radius:4px;white-space:normal}
+@media (max-width:560px){.panel{padding:18px}.bar{grid-template-columns:1fr auto}.bar .track{grid-column:1/-1;grid-row:2}}
+@media (prefers-reduced-motion:no-preference){.fill{transition:width .6s ease}}
+
+/* calendar */
+:root{--t1:#0C7650;--t2:#2563EB;--t3:#7C3AED;--t4:#C2410C;--t5:#9F1239;--t6:#DB2777;--t7:#0E7490;--t8:#4D7C0F;--t9:#A16207;--t10:#4B5563}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--t1:#43C892;--t2:#7AA7FF;--t3:#B794F6;--t4:#FB923C;--t5:#FB7185;--t6:#F472B6;--t7:#22D3EE;--t8:#A3E635;--t9:#FACC15;--t10:#A1A1AA}}
+:root[data-theme="dark"]{--t1:#43C892;--t2:#7AA7FF;--t3:#B794F6;--t4:#FB923C;--t5:#FB7185;--t6:#F472B6;--t7:#22D3EE;--t8:#A3E635;--t9:#FACC15;--t10:#A1A1AA}
+.calbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.fbtn{font:inherit;font-size:.85rem;display:inline-flex;align-items:center;gap:6px;background:var(--sheet);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:4px 12px;cursor:pointer}
+.fbtn[aria-pressed="false"]{opacity:.4;text-decoration:line-through}
+.fbtn i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.fbtn b{font-family:var(--mono);font-weight:500;font-size:.78rem;color:var(--muted)}
+.cal{border:1px solid var(--line);border-radius:10px;background:var(--sheet);overflow:hidden}
+.calhead,.week7{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
+.calhead span{padding:10px 12px;font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--line)}
+.dcell{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:8px;display:grid;gap:5px;align-content:start;min-height:120px;min-width:0}
+.dcell:nth-child(7n){border-right:none}
+.dcell.out{background:var(--paper)}
+.dnum{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+.dnum b{color:var(--ink);font-weight:500}
+.dcell.today .dnum b{color:var(--sheet);background:var(--ink);border-radius:4px;padding:0 5px}
+.chip{display:grid;grid-template-columns:auto 1fr;gap:2px 6px;text-decoration:none;color:var(--ink);font-size:.74rem;line-height:1.3;padding:4px 6px;border-radius:5px;border-left:4px solid var(--c);background:color-mix(in srgb,var(--c) 10%,var(--sheet))}
+.chip:hover{background:color-mix(in srgb,var(--c) 22%,var(--sheet))}
+.chip .pf{font-family:var(--mono);font-weight:500;font-size:.68rem;color:var(--c)}
+.chip .tm{font-family:var(--mono);font-size:.68rem;color:var(--muted);text-align:right}
+.chip .ti{grid-column:1/-1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.agenda{display:none}
+@media (max-width:760px){.cal{display:none}.agenda{display:grid;gap:14px}.agenda .dcell{border:1px solid var(--line);border-radius:8px;background:var(--sheet);min-height:0}}
+
+.strip .when2{font-family:var(--mono);font-size:.82rem;color:var(--accent)}
+.oneday{display:grid;grid-template-columns:70px repeat(6,minmax(110px,1fr));min-width:760px;position:relative}
+.oneday .ch{font-family:var(--mono);font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:6px 8px;border-bottom:1px solid var(--line)}
+.oneday .hr{font-family:var(--mono);font-size:.74rem;color:var(--muted);padding:4px 8px 0 0;text-align:right;border-top:1px solid var(--line);height:38px}
+.oneday .sl{border-top:1px solid var(--line);border-left:1px dotted var(--line);height:38px;padding:2px 3px}
+.blk{height:100%;border-radius:5px;display:flex;align-items:center;gap:6px;padding:0 7px;font-size:.74rem;line-height:1.15;background:color-mix(in srgb,var(--c) 14%,var(--sheet));border-left:4px solid var(--c);color:var(--ink);overflow:hidden}
+.blk b{font-family:var(--mono);font-weight:500}
+.blk.s3{background:var(--c);color:var(--sheet)}
+.blk.s1{opacity:.55}
+.dayline{display:grid;grid-template-columns:120px repeat(24,minmax(24px,1fr));gap:4px 2px;min-width:760px;align-items:center}
+.dayline .rl{font-family:var(--mono);font-size:.8rem}
+.dayline .hl{font-family:var(--mono);font-size:.7rem;color:var(--muted);text-align:center}
+.dayline .slot{height:34px;display:grid;place-items:center;border-left:1px dotted var(--line)}
+.dot{border-radius:50%;display:grid;place-items:center;font-family:var(--mono);font-size:.66rem;color:var(--sheet);background:var(--c)}
+.daynote{font-family:var(--mono);font-size:.68rem;color:var(--muted);text-align:center}
+
+.struct{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.spill{display:inline-block;font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:var(--sheet);background:var(--k);border-radius:999px;padding:2px 9px;white-space:nowrap}
+.arr{color:var(--muted);font-size:.85rem}
+.excard{position:relative;background:var(--sheet);border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:10px;box-shadow:0 2px 12px color-mix(in srgb,var(--ink) 8%,transparent)}
+.exhead{display:flex;gap:10px;align-items:center;padding-right:90px}
+.av{width:40px;height:40px;flex:none;border-radius:50%;background:var(--ink);color:var(--sheet);display:grid;place-items:center;font-weight:700;font-size:.9rem}
+.exname{display:grid;line-height:1.25;min-width:0}.exname span{font-size:.82rem;color:var(--muted)}
+.plat{margin-left:auto;font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:2px 8px}
+.seg{border-left:4px solid var(--k);background:color-mix(in srgb,var(--k) 8%,var(--sheet));border-radius:0 8px 8px 0;padding:8px 12px;display:grid;gap:4px}
+.seglab{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.seglab small{font-size:.8rem;color:var(--muted)}
+.seg p{white-space:pre-wrap;font-size:1rem;line-height:1.5;max-width:none}
+a.media{display:block;text-decoration:none}a.media:hover{outline:2px solid var(--accent);outline-offset:2px}
+.media{border-radius:10px;background:var(--ink);color:var(--sheet);padding:22px 16px;text-align:center;font-family:var(--mono);font-size:.85rem}
+.lcard,.parent{border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:.9rem;color:var(--muted)}
+.before{border:1px dashed var(--muted);border-radius:10px;padding:10px 12px;display:grid;gap:4px}.before small{color:var(--muted)}
+.arrdown{text-align:center;font-family:var(--mono);font-size:.78rem;color:var(--accent)}
+.met{display:flex;flex-wrap:wrap;gap:6px 16px;font-family:var(--mono);font-size:.82rem;color:var(--muted);border-top:1px solid var(--line);padding-top:10px}.met b{color:var(--ink);font-weight:500}
+.excard .copy{top:14px;right:14px}
+.bdwrap{display:grid;gap:10px}.bdhead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.bdlist{display:grid;gap:8px}
+details.bd{border:1px solid var(--line);border-left:5px solid var(--c);border-radius:8px;background:var(--sheet);padding:0}
+details.bd summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:12px 14px;font-family:var(--body);font-weight:400;font-size:1rem}
+details.bd summary::-webkit-details-marker{display:none}
+details.bd summary::after{content:"+";font-family:var(--mono);color:var(--muted)}
+details.bd[open] summary::after{content:"−"}
+details.bd summary{grid-template-columns:auto 1fr auto 14px}
+.bdty{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--sheet);background:var(--c);border-radius:999px;padding:2px 9px;white-space:nowrap}
+.bdab{min-width:0}.bdm{font-family:var(--mono);font-size:.82rem;color:var(--muted);white-space:nowrap}
+.bdgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px 18px;padding:4px 16px 16px}
+.bdgrid .wide{grid-column:1/-1}.bdgrid p{font-size:1rem}
+.hookq{font-family:var(--display);font-size:1.12rem;font-weight:500}
+@media (max-width:560px){details.bd summary{grid-template-columns:1fr 14px}.bdty,.bdm{grid-column:1}}
+
+</style>
+<div class="wrap">
+
+<header class="mast">
+  <span class="label">Reverse engineered marketing · Teardown no. 2 · Person</span>
+  <h1>REM: Rowan Cheung Social Playbook</h1>
+  <p class="thesis">Rowan Cheung, founder of The Rundown AI, now posts very little as himself. He wrote only 3 original posts on X in a month. One of them, a <em>copy and paste list of GrokBot routines</em>, reached 657K views and got more bookmarks than likes. The daily volume runs on TikTok with a science and robotics explainer every weekday. LinkedIn carries paid launch posts for OpenAI, Microsoft and DoorDash. Every personal post points back to The Rundown.</p>
+  <div class="slate">
+    <div><span class="label">Window</span><b>Sep 23 to Oct 23, 2026</b></div>
+    <div><span class="label">Accounts</span><b>X @rowancheung · TikTok · LinkedIn · Threads · Instagram</b></div>
+    <div><span class="label">Posts read</span><b>39 (incl. 6 X replies)</b></div>
+    <div><span class="label">Times shown in</span><b>Pacific Time (PT)</b></div>
+  </div>
+  <p class="src">Data pulled Oct 23, 2026 through Monid: AnyAPI <span class="mono">/twitter.user_posts</span>, Apify <span class="mono">apidojo/tweet scraper</span>, Apify <span class="mono">apidojo/tiktok profile scraper</span>, Apify <span class="mono">harvestapi/linkedin profile posts</span>, AnyAPI <span class="mono">/threads.user_posts</span>, Apify <span class="mono">instagram post scraper</span>, Apify <span class="mono">streamers/youtube scraper</span> and AnyAPI <span class="mono">/facebook.profile_posts</span>. Handles taken from <a href="https://rowancheung.com/" target="_blank" rel="noopener">rowancheung.com</a> and his <a href="https://linkedin.com/in/rowancheung" target="_blank" rel="noopener">LinkedIn profile</a>.</p>
+</header>
+
+<section aria-labelledby="h-day" style="margin-top:40px">
+  <h2 id="h-day">One day at Rowan Cheung</h2>
+  <p>The whole month folded into one day (PT). Each block is an hour slot where he posted on that platform. The number is how many posts landed in that hour over the month, and the color and label show what he mostly posted then. Because he posts so little outside TikTok, single posts are shown too.</p>
+  <div class="heat"><div class="oneday" id="oneday" role="img" aria-label="One day calendar of posting slots by platform"></div><div class="calbar" id="daylegend" style="margin-top:14px"></div></div>
+</section>
+
+<section aria-labelledby="h-cal">
+  <h2 id="h-cal">Content calendar</h2>
+  <p>Every post from the month on one calendar, colored by type. Click a post to open it. Use the buttons to show or hide platforms and types.</p>
+  <div class="calbar" id="fplat" aria-label="Platforms"></div>
+  <div class="calbar" id="ftype" aria-label="Types"></div>
+  <div class="cal"><div class="calhead"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div><div class="week7" id="calgrid"></div></div>
+  <div class="agenda" id="agenda"></div>
+  <p class="src">39 posts: 9 on X (3 originals, 1 link reply, 5 replies to other accounts), 22 TikTok, 5 LinkedIn, 2 Threads, 1 Instagram. YouTube @rowanch and Facebook had nothing in the window. Types assigned from post text and hashtags.</p>
+</section>
+
+<section aria-labelledby="h-cadence">
+  <h2 id="h-cadence">The overall playbook</h2>
+  <p>How much he posts on each platform, when, and what about.</p>
+  <div class="strip">
+    <div><span class="label">TikTok</span><span class="n">0.71/day</span><span class="when2">Weekdays, 7am to 3pm PT</span><span class="k">22 videos in 31 days, about one every weekday. None on weekends.</span></div>
+    <div><span class="label">X</span><span class="n">3 posts</span><span class="when2">8:30am PT, one at 3:46pm</span><span class="k">Plus 6 short replies. The GrokBot routines post reached 657,263 views.</span></div>
+    <div><span class="label">LinkedIn</span><span class="n">1.1/week</span><span class="when2">8:40am to 12pm PT</span><span class="k">5 posts. 3 of them are paid partner posts tagged #ad or #partner.</span></div>
+    <div><span class="label">Threads</span><span class="n">2 posts</span><span class="when2">Same minute as X or LinkedIn</span><span class="k">Cross posts only, with no original content.</span></div>
+    <div class="dead"><span class="label">Instagram</span><span class="n">1 post</span><span class="when2">1pm PT</span><span class="k">A "q3 in the books" photo carousel. The AI avatar reels have stopped.</span></div>
+    <div class="dead"><span class="label">YouTube · Facebook</span><span class="n">0</span><span class="when2">Not active</span><span class="k">The @rowanch channel was created Aug 25, 2026 and has no videos yet.</span></div>
+  </div>
+  <div class="chain"><table>
+    <thead><tr><th>Platform</th><th>Main topics</th><th>Call to action</th></tr></thead>
+    <tbody>
+      <tr><td><b>TikTok</b></td><td>AI for science and robotics (17 of 22), AI model news, paid launch explainers</td><td>News videos: none. Paid videos: "link in my bio" or "Comment Bot and I'll DM you the template"</td></tr>
+      <tr><td><b>X</b></td><td>Copy my AI workflow posts, one line takes, warm replies to founders</td><td>Self reply linking to The Rundown's Community Workflow Hub</td></tr>
+      <tr><td><b>LinkedIn</b></td><td>Paid launch explainers, founder and team stories, workflow posts rewritten as a story</td><td>"Full workflow + prompt in the comments", partner links</td></tr>
+      <tr><td><b>Threads</b></td><td>Same posts as X and LinkedIn</td><td>None</td></tr>
+      <tr><td><b>Instagram</b></td><td>Founder life photo dump</td><td>None</td></tr>
+    </tbody></table></div>
+  <p class="src">Rates: TikTok 22 videos ÷ 31 days = 0.71 per day. LinkedIn 5 posts ÷ 31 days × 7 = 1.13 per week. All counts from the Monid runs listed above.</p>
+</section>
+
+<section aria-labelledby="h-pillars">
+  <h2 id="h-pillars">What he posts about</h2>
+  <div class="pillars">
+    <div class="pillar"><span class="label">1 · Biggest reach</span><h3>Copy my AI workflow</h3><p>He shows a workflow he really uses and pastes the full prompts. "I'm GrokBot pilled. My 4 favorite routines (copy/paste these prompts)." The wardrobe app post went out the same minute on X, Threads and LinkedIn.</p><p class="ex">GrokBot post: 657,263 views, 2,610 likes, 3,162 bookmarks. 3,162 ÷ 2,610 = 1.21 bookmarks per like, which means people saved it to use later.</p></div>
+    <div class="pillar"><span class="label">2 · Revenue</span><h3>Paid launch explainers</h3><p>Big launches from OpenAI (dots), Microsoft (Copilot) and DoorDash, written as "I've had early access" explainers and tagged #ad or #partner. 6 posts across LinkedIn and TikTok.</p><p class="ex">The OpenAI dots TikTok reached 11,438,770 views, against a median of 4,416 for his other TikToks.</p></div>
+    <div class="pillar"><span class="label">3 · Daily volume</span><h3>AI for science and robotics</h3><p>One TikTok each weekday: a scorpion antivenom designed with Claude, brain scans turned into images, a laundry robot, nuclear fusion. They open with an emoji and one surprising sentence.</p><p class="ex">17 videos, 212,252 views in total. The best was Brain IT at 86,031.</p></div>
+    <div class="pillar"><span class="label">4</span><h3>AI model news</h3><p>Odd moments from the frontier labs: a GPT 6 Astra model playing Minecraft for 141 hours, a Claude model swearing at a CAPTCHA.</p><p class="ex">2 TikToks, 18,962 and 2,205 views.</p></div>
+    <div class="pillar"><span class="label">5</span><h3>Founder life</h3><p>The first team retreat in Lisbon, a "q3 in the books" photo dump. These are personal and show the company behind the newsletter.</p><p class="ex">The retreat post was his top LinkedIn post of the month with 147 likes.</p></div>
+    <div class="pillar"><span class="label">6</span><h3>One line takes, tested in replies</h3><p>On Oct 13 he replied to another founder: "the only moat is the ability to move faster than the pace of change". Two days later he posted the same line on its own.</p><p class="ex">The standalone version drew 111 replies on 27,747 views.</p></div>
+    <div class="pillar"><span class="label">7</span><h3>Warm replies to builders</h3><p>Short praise to founders he covers or interviews: "You guys move FAST" to Brett Adcock, "You guys crushed it" to Chris Park. This builds the relationships that bring exclusive interviews.</p><p class="ex">5 replies in the month, averaging 3,757 views each.</p></div>
+    <div class="pillar"><span class="label">8</span><h3>Everything funnels to The Rundown</h3><p>Workflows link to The Rundown's Community Workflow Hub. Bios say "Join 2,000,000+ Readers". The personal brand works as a front door to the newsletter.</p><p class="ex">X bio location field: "Join 2,000,000+ Readers →".</p></div>
+  </div>
+</section>
+
+<section aria-labelledby="h-chain">
+  <h2 id="h-chain">One post, every surface</h2>
+  <p>He doesn't post every platform every day. When a post matters, it goes everywhere within a minute, rewritten for each platform.</p>
+  <div class="chain"><table>
+    <thead><tr><th>Post</th><th>X</th><th>Threads</th><th>LinkedIn</th><th>TikTok</th></tr></thead>
+    <tbody>
+      <tr><td>Wardrobe app built with GPT 6 Astra</td><td class="t">Oct 7 · 08:42:21</td><td class="t">Oct 7 · 08:42:53</td><td class="t">Oct 7 · 08:42:41</td><td class="t">none</td></tr>
+      <tr><td>First team retreat</td><td class="t">none</td><td class="t">Oct 5 · 08:49:11</td><td class="t">Oct 5 · 08:49:05</td><td class="t">none</td></tr>
+      <tr><td>OpenAI dots (paid)</td><td class="t">none</td><td class="t">none</td><td class="t">Sep 29 · 12:03</td><td class="t">Sep 29 · 10:46</td></tr>
+      <tr><td>DoorDash Dash Forward (paid)</td><td class="t">none</td><td class="t">none</td><td class="t">Oct 5 · 11:41</td><td class="t">Oct 2 · 14:56</td></tr>
+    </tbody></table></div>
+  <p class="src">Times in PT, from post timestamps returned by Monid.</p>
+</section>
+
+<section aria-labelledby="h-platforms">
+  <h2 id="h-platforms">Platform by platform</h2>
+  <div class="tabs" role="tablist" aria-label="Platforms">
+    <button class="tab" role="tab" id="t-X" aria-controls="p-X" aria-selected="true">X<small>9</small></button>
+    <button class="tab" role="tab" id="t-TT" aria-controls="p-TT" aria-selected="false">TikTok<small>22</small></button>
+    <button class="tab" role="tab" id="t-LI" aria-controls="p-LI" aria-selected="false">LinkedIn<small>5</small></button>
+    <button class="tab" role="tab" id="t-TH" aria-controls="p-TH" aria-selected="false">Threads<small>2</small></button>
+    <button class="tab" role="tab" id="t-IG" aria-controls="p-IG" aria-selected="false">Instagram<small>1</small></button>
+  </div>
+  
+  <div class="panel" role="tabpanel" id="p-X" aria-labelledby="t-X">
+    <div class="facts"><div><span class="label">Format</span><p>Mostly text. 1 of 3 originals has a 16:9 demo video</p></div><div><span class="label">Cadence</span><p>3 originals and 6 replies in 31 days</p></div><div><span class="label">Peak time</span><p>8:30 to 9am PT (2 of 3 originals)</p></div><div><span class="label">Call to action</span><p>Link to The Rundown in a reply to his own post</p></div></div>
+    <div class="two">
+      <div>
+        <h3>What reached the most people</h3>
+        <p>Average views per post by content type. <b>Click a type</b> to see how that kind of post is built.</p>
+        <span class="hint"><span class="hand" aria-hidden="true">👉</span>Click any bar to open its recipe</span>
+        <div class="bars" id="bars-X"></div>
+        <ul class="plain"><li>The 3,162 bookmarks on the GrokBot post outnumber its 2,610 likes. Copyable prompts get saved, which tells the algorithm the post is worth spreading.</li><li>The wardrobe post had a video and reached 30,915 views. The text only GrokBot post reached 657,263, about 21 times more (657,263 ÷ 30,915 = 21.3).</li><li>Replies go to founders he covers (Brett Adcock, Chris Park), not to random accounts.</li></ul>
+      </div>
+      <div>
+        <h3 id="rt-X">Recipe</h3>
+        <p class="src" id="rm-X"></p>
+        <div class="struct" id="st-X" aria-label="Post structure"></div>
+        <div class="excard" id="ex-X"></div>
+        <p class="src" id="re-X"></p>
+      </div>
+    </div>
+    <div><h3>Top posts</h3><div class="chain"><table><thead><tr><th>Posted (PT)</th><th>Post</th><th>Type</th><th class="num">Views</th></tr></thead><tbody><tr><td class="t">10/08 · 15:46</td><td><a href="https://x.com/rowancheung/status/2108328114552000842" target="_blank" rel="noopener">I&#x27;m GrokBot pilled. My 4 favorite routines (copy/paste these prompts)</a></td><td>Copy my AI workflow</td><td class="num">657,263</td></tr><tr><td class="t">10/07 · 08:42</td><td><a href="https://x.com/rowancheung/status/2107859082036334613" target="_blank" rel="noopener">AI is getting REALLY good at building your wardrobe. I built an app with GPT 6 Astra that…</a></td><td>Copy my AI workflow</td><td class="num">30,915</td></tr><tr><td class="t">10/15 · 08:36</td><td><a href="https://x.com/rowancheung/status/2110756703042244781" target="_blank" rel="noopener">The only moat left is the ability to move faster than the pace of change</a></td><td>One line take</td><td class="num">27,747</td></tr><tr><td class="t">10/07 · 08:42</td><td><a href="https://x.com/rowancheung/status/2107859093977460785" target="_blank" rel="noopener">The full workflow and prompt that I posted on The Rundown&#x27;s Community Workflow Hub</a></td><td>Link to The Rundown</td><td class="num">9,081</td></tr><tr><td class="t">10/06 · 11:34</td><td><a href="https://x.com/rowancheung/status/2107539996135579927" target="_blank" rel="noopener">@adcock_brett You guys move FAST</a></td><td>Reply to builders</td><td class="num">8,458</td></tr></tbody></table></div><p class="src">Source: @rowancheung via Monid AnyAPI /twitter.user_posts and Apify apidojo/tweet scraper.</p></div>
+    <div class="bdwrap"><div class="bdhead"><h3>Content breakdown</h3><button type="button" class="fbtn bdall" data-pl="X">Expand all</button></div>
+      <p class="src">Every post this month, newest first. What it is about, the hook, the structure, where the information came from, and when it went out. The wardrobe post has a 45 second demo video; the others are text.</p>
+      <div class="bdlist" id="bd-X"></div></div>
+  </div>
+  <div class="panel" role="tabpanel" id="p-TT" aria-labelledby="t-TT" hidden>
+    <div class="facts"><div><span class="label">Format</span><p>Vertical video, 68 seconds on average</p></div><div><span class="label">Cadence</span><p>22 in 31 days, weekdays only</p></div><div><span class="label">Peak time</span><p>8am and 11am PT (4 videos each)</p></div><div><span class="label">Call to action</span><p>Paid videos only: "link in my bio" or "Comment Bot" for a template</p></div></div>
+    <div class="two">
+      <div>
+        <h3>What reached the most people</h3>
+        <p>Average views per video by content type. <b>Click a type</b> to see how that kind of post is built.</p>
+        <span class="hint"><span class="hand" aria-hidden="true">👉</span>Click any bar to open its recipe</span>
+        <div class="bars" id="bars-TT"></div>
+        <ul class="plain"><li>17 of 22 videos are AI for science and robotics stories, not AI tool tips. That keeps the account broad and shareable.</li><li>Without the paid OpenAI video, the other 21 TikToks together drew 238,696 views (11,677,466 − 11,438,770). The median video got 4,416.</li><li>The three paid videos carry the brand tag: #chatgpt_partner, #doordashpartner, #grokpartner.</li></ul>
+      </div>
+      <div>
+        <h3 id="rt-TT">Recipe</h3>
+        <p class="src" id="rm-TT"></p>
+        <div class="struct" id="st-TT" aria-label="Post structure"></div>
+        <div class="excard" id="ex-TT"></div>
+        <p class="src" id="re-TT"></p>
+      </div>
+    </div>
+    <div><h3>Top posts</h3><div class="chain"><table><thead><tr><th>Posted (PT)</th><th>Post</th><th>Type</th><th class="num">Views</th></tr></thead><tbody><tr><td class="t">09/29 · 10:46</td><td><a href="https://www.tiktok.com/@rowancheung/video/7691014942849387807" target="_blank" rel="noopener">OpenAI just announced dots at DevDay, always on agents inside ChatGPT that can keep…</a></td><td>Paid launch explainer</td><td class="num">11,438,770</td></tr><tr><td class="t">10/22 · 12:12</td><td><a href="https://www.tiktok.com/@rowancheung/video/7699572082392272158" target="_blank" rel="noopener">An AI system called Brain IT can reconstruct recognizable images from brain scans of…</a></td><td>AI science and robotics</td><td class="num">86,031</td></tr><tr><td class="t">09/28 · 07:00</td><td><a href="https://www.tiktok.com/@rowancheung/video/7690565749739392286" target="_blank" rel="noopener">Japanese startup MW (pronounced “mu”) wants to turn the house itself into a robot. Its…</a></td><td>AI science and robotics</td><td class="num">45,807</td></tr><tr><td class="t">10/09 · 11:50</td><td><a href="https://www.tiktok.com/@rowancheung/video/7694742236331838751" target="_blank" rel="noopener">OpenAI’s GPT 6 Astra played Minecraft for 141 hours in a test by Vals AI, reportedly…</a></td><td>AI model news</td><td class="num">18,962</td></tr><tr><td class="t">10/12 · 08:30</td><td><a href="https://www.tiktok.com/@rowancheung/video/7695791071283940638" target="_blank" rel="noopener">This is the largest nuclear fusion project ever attempted. Scientists are building a…</a></td><td>AI science and robotics</td><td class="num">13,134</td></tr></tbody></table></div><p class="src">Source: tiktok.com/@rowancheung via Monid Apify apidojo/tiktok profile scraper. 83,560 followers on Oct 23.</p></div>
+    <div class="bdwrap"><div class="bdhead"><h3>Content breakdown</h3><button type="button" class="fbtn bdall" data-pl="TT">Expand all</button></div>
+      <p class="src">Every post this month, newest first. What it is about, the hook, the structure, where the information came from, and when it went out. Video structure is read from the captions, which follow the voiceover. I could not watch the videos.</p>
+      <div class="bdlist" id="bd-TT"></div></div>
+  </div>
+  <div class="panel" role="tabpanel" id="p-LI" aria-labelledby="t-LI" hidden>
+    <div class="facts"><div><span class="label">Format</span><p>3 videos, 1 team photo, 1 repost of Satya Nadella's launch post</p></div><div><span class="label">Cadence</span><p>5 posts in 31 days</p></div><div><span class="label">Peak time</span><p>8:40 to 8:50am PT (3 of 5)</p></div><div><span class="label">Call to action</span><p>Partner links or "workflow in the comments"</p></div></div>
+    <div class="two">
+      <div>
+        <h3>What reached the most people</h3>
+        <p>Average likes per post by content type. <b>Click a type</b> to see how that kind of post is built.</p>
+        <span class="hint"><span class="hand" aria-hidden="true">👉</span>Click any bar to open its recipe</span>
+        <div class="bars" id="bars-LI"></div>
+        <ul class="plain"><li>LinkedIn is where the paid partnerships show up most: 3 of 5 posts.</li><li>The personal story (team retreat) beat every paid post: 147 likes against an average of 32 for the paid ones.</li><li>The wardrobe post was rewritten for LinkedIn as a story ("My team noticed I stopped wearing the same black t shirt") and drew 36 comments, the most of any post here.</li></ul>
+      </div>
+      <div>
+        <h3 id="rt-LI">Recipe</h3>
+        <p class="src" id="rm-LI"></p>
+        <div class="struct" id="st-LI" aria-label="Post structure"></div>
+        <div class="excard" id="ex-LI"></div>
+        <p class="src" id="re-LI"></p>
+      </div>
+    </div>
+    <div><h3>Top posts</h3><div class="chain"><table><thead><tr><th>Posted (PT)</th><th>Post</th><th>Type</th><th class="num">Likes</th></tr></thead><tbody><tr><td class="t">10/05 · 08:49</td><td><a href="https://www.linkedin.com/posts/rowancheung_ive-been-building-the-rundown-for-35-years-activity-7512901689755111424-lmrc" target="_blank" rel="noopener">I&#x27;ve been building The Rundown for 3.5 years, and we&#x27;ve grown to 20+ people. And until…</a></td><td>Founder life</td><td class="num">147</td></tr><tr><td class="t">09/29 · 12:03</td><td><a href="https://www.linkedin.com/posts/rowancheung_chatgptabrpartner-activity-7510776212579864577-vKJt" target="_blank" rel="noopener">OpenAI just announced dots at DevDay (#ChatGPT_Partner)</a></td><td>Paid launch explainer</td><td class="num">52</td></tr><tr><td class="t">10/07 · 08:42</td><td><a href="https://www.linkedin.com/posts/rowancheung_my-team-noticed-i-stopped-wearing-the-same-activity-7513624851610320898-xpX1" target="_blank" rel="noopener">My team noticed I stopped wearing the same black t shirt every day. It&#x27;s because I…</a></td><td>Copy my AI workflow</td><td class="num">51</td></tr><tr><td class="t">09/28 · 08:45</td><td><a href="https://www.linkedin.com/posts/rowancheung_were-building-copilot-as-a-new-os-for-work-activity-7510363959825231872-sqdO" target="_blank" rel="noopener">A ton of hidden gems in the Copilot update from Microsoft (#ad #microsoftpartner)</a></td><td>Paid launch explainer</td><td class="num">24</td></tr><tr><td class="t">10/05 · 11:41</td><td><a href="https://www.linkedin.com/posts/rowancheung_doordashpartner-activity-7512945041888317440-8kT4" target="_blank" rel="noopener">DoorDash just introduced some new AI tools at its Dash Forward event (#doordashpartner)</a></td><td>Paid launch explainer</td><td class="num">21</td></tr></tbody></table></div><p class="src">Source: linkedin.com/in/rowancheung via Monid Apify harvestapi/linkedin profile posts.</p></div>
+    <div class="bdwrap"><div class="bdhead"><h3>Content breakdown</h3><button type="button" class="fbtn bdall" data-pl="LI">Expand all</button></div>
+      <p class="src">Every post this month, newest first. What it is about, the hook, the structure, where the information came from, and when it went out.</p>
+      <div class="bdlist" id="bd-LI"></div></div>
+  </div>
+  <div class="panel" role="tabpanel" id="p-TH" aria-labelledby="t-TH" hidden>
+    <div class="facts"><div><span class="label">Format</span><p>Text, cross posted</p></div><div><span class="label">Cadence</span><p>2 posts in 31 days</p></div><div><span class="label">Time</span><p>Within a minute of the X or LinkedIn post</p></div><div><span class="label">Call to action</span><p>None</p></div></div>
+    <div class="two">
+      <div>
+        <h3>What reached the most people</h3>
+        <p>Average likes per post by content type. <b>Click a type</b> to see how that kind of post is built.</p>
+        <span class="hint"><span class="hand" aria-hidden="true">👉</span>Click any bar to open its recipe</span>
+        <div class="bars" id="bars-TH"></div>
+        <ul class="plain"><li>Threads gets nothing original. Both posts are shortened copies sent within seconds of the X or LinkedIn version.</li></ul>
+      </div>
+      <div>
+        <h3 id="rt-TH">Recipe</h3>
+        <p class="src" id="rm-TH"></p>
+        <div class="struct" id="st-TH" aria-label="Post structure"></div>
+        <div class="excard" id="ex-TH"></div>
+        <p class="src" id="re-TH"></p>
+      </div>
+    </div>
+    <div><h3>Top posts</h3><div class="chain"><table><thead><tr><th>Posted (PT)</th><th>Post</th><th>Type</th><th class="num">Likes</th></tr></thead><tbody><tr><td class="t">10/07 · 08:42</td><td><a href="https://www.threads.com/@rowancheung/post/DeMtLcoFB_3" target="_blank" rel="noopener">AI is getting REALLY good at building your wardrobe (cross post from X)</a></td><td>Copy my AI workflow</td><td class="num">11</td></tr><tr><td class="t">10/05 · 08:49</td><td><a href="https://www.threads.com/@rowancheung/post/DeHkYCmG6of" target="_blank" rel="noopener">I&#x27;ve been building The Rundown for 3.5 years, and we&#x27;ve grown to 20+ people. First ever…</a></td><td>Founder life</td><td class="num">7</td></tr></tbody></table></div><p class="src">Source: threads.com/@rowancheung via Monid AnyAPI /threads.user_posts.</p></div>
+    <div class="bdwrap"><div class="bdhead"><h3>Content breakdown</h3><button type="button" class="fbtn bdall" data-pl="TH">Expand all</button></div>
+      <p class="src">Every post this month, newest first. What it is about, the hook, the structure, where the information came from, and when it went out.</p>
+      <div class="bdlist" id="bd-TH"></div></div>
+  </div>
+  <div class="panel" role="tabpanel" id="p-IG" aria-labelledby="t-IG" hidden>
+    <div class="facts"><div><span class="label">Format</span><p>Photo carousel</p></div><div><span class="label">Cadence</span><p>1 post in 31 days</p></div><div><span class="label">Time</span><p>1pm PT</p></div><div><span class="label">Engagement</span><p>42 comments, likes hidden</p></div></div>
+    <div class="two">
+      <div>
+        <h3>What reached the most people</h3>
+        <p>Average comments by content type. <b>Click a type</b> to see how that kind of post is built.</p>
+        <span class="hint"><span class="hand" aria-hidden="true">👉</span>Click any bar to open its recipe</span>
+        <div class="bars" id="bars-IG"></div>
+        <ul class="plain"><li>The AI avatar reels that grew this account have stopped. On a podcast released Oct 5, 2026, one chapter is titled "Scrapping his short form AI avatar".</li><li>Instagram is now a once a quarter photo dump.</li></ul>
+      </div>
+      <div>
+        <h3 id="rt-IG">Recipe</h3>
+        <p class="src" id="rm-IG"></p>
+        <div class="struct" id="st-IG" aria-label="Post structure"></div>
+        <div class="excard" id="ex-IG"></div>
+        <p class="src" id="re-IG"></p>
+      </div>
+    </div>
+    <div><h3>Top posts</h3><div class="chain"><table><thead><tr><th>Posted (PT)</th><th>Post</th><th>Type</th><th class="num">Comments</th></tr></thead><tbody><tr><td class="t">09/27 · 13:00</td><td><a href="https://www.instagram.com/p/DdzayVADYgp/" target="_blank" rel="noopener">q3 in the books ✅ (photo carousel)</a></td><td>Founder life</td><td class="num">42</td></tr></tbody></table></div><p class="src">Source: instagram.com/rowancheung via Monid Apify instagram post scraper. Podcast: <a href="https://videos.creatorspotlight.com/v/ep131-rowan-cheung-4k" target="_blank" rel="noopener">Creator Spotlight ep. 131</a>.</p></div>
+    <div class="bdwrap"><div class="bdhead"><h3>Content breakdown</h3><button type="button" class="fbtn bdall" data-pl="IG">Expand all</button></div>
+      <p class="src">Every post this month, newest first. What it is about, the hook, the structure, where the information came from, and when it went out.</p>
+      <div class="bdlist" id="bd-IG"></div></div>
+  </div>
+</section>
+
+<section aria-labelledby="h-copy">
+  <h2 id="h-copy">Copy it: a week for a solo creator</h2>
+  <p>This is my adaptation of his pattern for one person, not something taken from his data.</p>
+  <div class="week">
+    <div class="day"><span class="label">Mon to Fri</span><h3>One short video</h3><p>A 60 to 75 second explainer of one surprising AI story. Open with an emoji and one sentence. Batch them and schedule ahead.</p><span class="when">TikTok 8am to 1pm PT</span></div>
+    <div class="day"><span class="label">Once a week</span><h3>Copy my workflow</h3><p>A workflow you really run, with the full prompts pasted in. Post on X, Threads and LinkedIn in the same minute, with a link reply to your own site.</p><span class="when">X + Threads + LinkedIn 8:40am PT</span></div>
+    <div class="day"><span class="label">Daily, 5 min</span><h3>Reply to builders</h3><p>Short, real praise under launches from founders in your niche. Try your one line takes here first.</p><span class="when">Late morning PT</span></div>
+    <div class="day"><span class="label">Twice a month</span><h3>Founder life</h3><p>A team moment or a quarter recap. LinkedIn gets the long story, and Threads and Instagram get a short version.</p><span class="when">LinkedIn 8:45am PT</span></div>
+    <div class="day"><span class="label">When it lands</span><h3>Your best line, alone</h3><p>If a reply line gets traction, post it on its own 1 to 2 days later.</p><span class="when">X 8:30am PT</span></div>
+    <div class="day"><span class="label">Once you have reach</span><h3>Paid launch explainer</h3><p>Early access to a launch, 3 numbered points, a question, the link, and an #ad tag.</p><span class="when">Launch day</span></div>
+  </div>
+  <div class="two">
+    <div>
+      <h3>Checklist for a workflow post</h3>
+      <ul class="plain">
+        <li>It is something you really use, written in first person.</li>
+        <li>The full prompt is in the post, ready to paste.</li>
+        <li>A number in the hook: "My 4 favorite routines".</li>
+        <li>Same minute on X, Threads and LinkedIn, rewritten for LinkedIn as a story.</li>
+        <li>A reply with the link to your own site, not in the main post.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>What not to copy</h3>
+      <ul class="plain">
+        <li>Posting this rarely on X only works with 600K followers. A new account needs daily posts to grow, the way he did in 2023.</li>
+        <li>Paid partner posts come after the audience exists. Always tag them #ad.</li>
+        <li>Don't post the same video to every platform. He keeps TikTok separate from X.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script>
+(function(){
+  function esc(x){return String(x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function fmtN(v){return v>=1e6?(v/1e6).toFixed(2)+'M':v>=1e4?Math.round(v/1e3)+'K':v.toLocaleString('en-US');}
+  var CP=[{"p": "TT", "d": "20260923", "t": "10:13", "ty": "AI science and robotics", "ti": "AI helped researchers uncover a likely cause of a child’s severe epilepsy after years of…", "u": "https://www.tiktok.com/@rowancheung/video/7688779929223318815", "m": {"views": 1770, "likes": 77, "dur": 67.5}}, {"p": "TT", "d": "20260924", "t": "08:59", "ty": "AI science and robotics", "ti": "Google’s new AI weather model is beating some of the world’s best forecasting systems.…", "u": "https://www.tiktok.com/@rowancheung/video/7689132005291773215", "m": {"views": 2156, "likes": 91, "dur": 65.108}}, {"p": "TT", "d": "20260925", "t": "08:48", "ty": "AI science and robotics", "ti": "Skild AI’s S1 model lets robots tackle unfamiliar tasks after seeing a single video…", "u": "https://www.tiktok.com/@rowancheung/video/7689500100925705502", "m": {"views": 4675, "likes": 212, "dur": 66.083}}, {"p": "IG", "d": "20260927", "t": "13:00", "ty": "Founder life", "ti": "q3 in the books ✅ (photo carousel)", "u": "https://www.instagram.com/p/DdzayVADYgp/", "m": {"comments": 42}}, {"p": "TT", "d": "20260928", "t": "07:00", "ty": "AI science and robotics", "ti": "Japanese startup MW (pronounced “mu”) wants to turn the house itself into a robot. Its…", "u": "https://www.tiktok.com/@rowancheung/video/7690565749739392286", "m": {"views": 45807, "likes": 1662, "dur": 63.553}}, {"p": "LI", "d": "20260928", "t": "08:45", "ty": "Paid launch explainer", "ti": "A ton of hidden gems in the Copilot update from Microsoft (#ad #microsoftpartner)", "u": "https://www.linkedin.com/posts/rowancheung_were-building-copilot-as-a-new-os-for-work-activity-7510363959825231872-sqdO", "m": {"likes": 24, "comments": 9}}, {"p": "TT", "d": "20260929", "t": "10:46", "ty": "Paid launch explainer", "ti": "OpenAI just announced dots at DevDay, always on agents inside ChatGPT that can keep…", "u": "https://www.tiktok.com/@rowancheung/video/7691014942849387807", "m": {"views": 11438770, "likes": 10749, "dur": 104.982}}, {"p": "LI", "d": "20260929", "t": "12:03", "ty": "Paid launch explainer", "ti": "OpenAI just announced dots at DevDay (#ChatGPT_Partner)", "u": "https://www.linkedin.com/posts/rowancheung_chatgptabrpartner-activity-7510776212579864577-vKJt", "m": {"likes": 52, "comments": 16}}, {"p": "TT", "d": "20261001", "t": "09:23", "ty": "AI science and robotics", "ti": "A brain implant is letting people with paralysis control a digital avatar using words and…", "u": "https://www.tiktok.com/@rowancheung/video/7691735620825222430", "m": {"views": 1009, "likes": 40, "dur": 64.922}}, {"p": "TT", "d": "20261002", "t": "14:56", "ty": "Paid launch explainer", "ti": "DoorDash just introduced some new AI tools at its Dash Forward event, including a way to…", "u": "https://www.tiktok.com/@rowancheung/video/7692192578724252959", "m": {"views": 2959, "likes": 86, "dur": 66.049}}, {"p": "TT", "d": "20261005", "t": "08:12", "ty": "AI science and robotics", "ti": "A fruit fly’s neural wiring is becoming the blueprint for some very unusual experiments.…", "u": "https://www.tiktok.com/@rowancheung/video/7693201667973664030", "m": {"views": 2566, "likes": 94, "dur": 67.569}}, {"p": "TH", "d": "20261005", "t": "08:49", "ty": "Founder life", "ti": "I've been building The Rundown for 3.5 years, and we've grown to 20+ people. First ever…", "u": "https://www.threads.com/@rowancheung/post/DeHkYCmG6of", "m": {"likes": 7, "replies": 4}}, {"p": "LI", "d": "20261005", "t": "08:49", "ty": "Founder life", "ti": "I've been building The Rundown for 3.5 years, and we've grown to 20+ people. And until…", "u": "https://www.linkedin.com/posts/rowancheung_ive-been-building-the-rundown-for-35-years-activity-7512901689755111424-lmrc", "m": {"likes": 147, "comments": 19}}, {"p": "X", "d": "20261005", "t": "11:33", "ty": "Reply to builders", "ti": "@kathrynjc7 @lemme @CelsiusOfficial So good", "u": "https://x.com/rowancheung/status/2107177470835261892", "m": {"views": 1596}}, {"p": "LI", "d": "20261005", "t": "11:41", "ty": "Paid launch explainer", "ti": "DoorDash just introduced some new AI tools at its Dash Forward event (#doordashpartner)", "u": "https://www.linkedin.com/posts/rowancheung_doordashpartner-activity-7512945041888317440-8kT4", "m": {"likes": 21, "comments": 19}}, {"p": "TT", "d": "20261006", "t": "11:18", "ty": "AI science and robotics", "ti": "NASA and IBM just gave the Moon its own AI model. Trained on roughly two million image…", "u": "https://www.tiktok.com/@rowancheung/video/7693620770127334686", "m": {"views": 4416, "likes": 249, "dur": 69.078}}, {"p": "X", "d": "20261006", "t": "11:34", "ty": "Reply to builders", "ti": "@adcock_brett You guys move FAST", "u": "https://x.com/rowancheung/status/2107539996135579927", "m": {"views": 8458}}, {"p": "X", "d": "20261007", "t": "08:42", "ty": "Copy my AI workflow", "ti": "AI is getting REALLY good at building your wardrobe. I built an app with GPT 6 Astra that…", "u": "https://x.com/rowancheung/status/2107859082036334613", "m": {"views": 30915, "likes": 96, "bm": 110, "replies": 65}}, {"p": "X", "d": "20261007", "t": "08:42", "ty": "Link to The Rundown", "ti": "The full workflow and prompt that I posted on The Rundown's Community Workflow Hub", "u": "https://x.com/rowancheung/status/2107859093977460785", "m": {"views": 9081, "likes": 11, "bm": 22, "replies": 8}}, {"p": "TH", "d": "20261007", "t": "08:42", "ty": "Copy my AI workflow", "ti": "AI is getting REALLY good at building your wardrobe (cross post from X)", "u": "https://www.threads.com/@rowancheung/post/DeMtLcoFB_3", "m": {"likes": 11, "replies": 14}}, {"p": "LI", "d": "20261007", "t": "08:42", "ty": "Copy my AI workflow", "ti": "My team noticed I stopped wearing the same black t shirt every day. It's because I…", "u": "https://www.linkedin.com/posts/rowancheung_my-team-noticed-i-stopped-wearing-the-same-activity-7513624851610320898-xpX1", "m": {"likes": 51, "comments": 36}}, {"p": "TT", "d": "20261007", "t": "11:51", "ty": "AI model news", "ti": "\"WHAT THE **** IS WRONG WITH THE ANSWERS?\"   Claude Mythos AI model after repeatedly…", "u": "https://www.tiktok.com/@rowancheung/video/7694000523317398814", "m": {"views": 2205, "likes": 93, "dur": 67.035}}, {"p": "TT", "d": "20261008", "t": "11:20", "ty": "AI science and robotics", "ti": "Researchers at ETH Zurich have turned a commercial robotic hand into a crawling machine…", "u": "https://www.tiktok.com/@rowancheung/video/7694363593218837791", "m": {"views": 11100, "likes": 611, "dur": 59.14}}, {"p": "X", "d": "20261008", "t": "15:46", "ty": "Copy my AI workflow", "ti": "I'm GrokBot pilled. My 4 favorite routines (copy/paste these prompts)", "u": "https://x.com/rowancheung/status/2108328114552000842", "m": {"views": 657263, "likes": 2610, "bm": 3162, "replies": 241}}, {"p": "X", "d": "20261008", "t": "15:52", "ty": "Reply to builders", "ti": "@chrisparkX You guys crushed it", "u": "https://x.com/rowancheung/status/2108329792403599468", "m": {"views": 4261}}, {"p": "TT", "d": "20261009", "t": "11:50", "ty": "AI model news", "ti": "OpenAI’s GPT 6 Astra played Minecraft for 141 hours in a test by Vals AI, reportedly…", "u": "https://www.tiktok.com/@rowancheung/video/7694742236331838751", "m": {"views": 18962, "likes": 594, "dur": 70.1}}, {"p": "TT", "d": "20261012", "t": "08:30", "ty": "AI science and robotics", "ti": "This is the largest nuclear fusion project ever attempted. Scientists are building a…", "u": "https://www.tiktok.com/@rowancheung/video/7695791071283940638", "m": {"views": 13134, "likes": 806, "dur": 74.744}}, {"p": "X", "d": "20261013", "t": "08:53", "ty": "Reply to builders", "ti": "@Bencera the only moat is the ability to move faster than the pace of change", "u": "https://x.com/rowancheung/status/2110036279530570168", "m": {"views": 2289}}, {"p": "TT", "d": "20261013", "t": "13:31", "ty": "AI science and robotics", "ti": "Why is laundry such a big deal in robotics? It combines unpredictable objects, changing…", "u": "https://www.tiktok.com/@rowancheung/video/7696252834152582430", "m": {"views": 10971, "likes": 468, "dur": 69.821}}, {"p": "X", "d": "20261013", "t": "14:20", "ty": "Reply to builders", "ti": "@markbrazil Fun one. Thanks for having me!", "u": "https://x.com/rowancheung/status/2110118622144430150", "m": {"views": 2181}}, {"p": "TT", "d": "20261014", "t": "15:20", "ty": "AI science and robotics", "ti": "Children’s Hospital of Philadelphia is using NVIDIA backed open source AI to turn medical…", "u": "https://www.tiktok.com/@rowancheung/video/7696651873255755039", "m": {"views": 1189, "likes": 46, "dur": 67.778}}, {"p": "X", "d": "20261015", "t": "08:36", "ty": "One line take", "ti": "The only moat left is the ability to move faster than the pace of change", "u": "https://x.com/rowancheung/status/2110756703042244781", "m": {"views": 27747, "likes": 119, "bm": 11, "replies": 111}}, {"p": "TT", "d": "20261015", "t": "13:47", "ty": "AI science and robotics", "ti": "Scientists in Germany have built E MAP, a robotic lab that prepares semiconductor inks,…", "u": "https://www.tiktok.com/@rowancheung/video/7696998957444009246", "m": {"views": 12197, "likes": 567, "dur": 74.651}}, {"p": "TT", "d": "20261016", "t": "15:20", "ty": "AI science and robotics", "ti": "🦠 Red Queen Bio is using AI to develop antibody drugs that could help stop future…", "u": "https://www.tiktok.com/@rowancheung/video/7697394195018894623", "m": {"views": 2064, "likes": 80, "dur": 64.318}}, {"p": "TT", "d": "20261019", "t": "14:21", "ty": "AI science and robotics", "ti": "🐀 Scientists are using living rat brain cells to explore better ways to build artificial…", "u": "https://www.tiktok.com/@rowancheung/video/7698492226560625950", "m": {"views": 4232, "likes": 206, "dur": 60.534}}, {"p": "TT", "d": "20261020", "t": "13:52", "ty": "Paid launch explainer", "ti": "We built an AI Bot to help our team decide where our marketing budget should go. Rishi,…", "u": "https://www.tiktok.com/@rowancheung/video/7698855705037622558", "m": {"views": 2318, "likes": 68, "dur": 56.683}}, {"p": "TT", "d": "20261021", "t": "09:28", "ty": "AI science and robotics", "ti": "🥊 This robot cage fight just got hit with a cease and desist letter. Frankie LaPenna…", "u": "https://www.tiktok.com/@rowancheung/video/7699158820265757982", "m": {"views": 7659, "likes": 441, "dur": 59.489}}, {"p": "TT", "d": "20261022", "t": "12:12", "ty": "AI science and robotics", "ti": "An AI system called Brain IT can reconstruct recognizable images from brain scans of…", "u": "https://www.tiktok.com/@rowancheung/video/7699572082392272158", "m": {"views": 86031, "likes": 6316, "dur": 72.9}}, {"p": "TT", "d": "20261023", "t": "12:34", "ty": "AI science and robotics", "ti": "🦂 Claude just helped design a potential scorpion antivenom. In 64 hours, an internal…", "u": "https://www.tiktok.com/@rowancheung/video/7699948958558326046", "m": {"views": 1276, "likes": 48, "dur": 69.775}}];
+  var PL={X:'X',TT:'TikTok',LI:'LinkedIn',TH:'Threads',IG:'Instagram'};
+  var TC={'Copy my AI workflow':'--t1','Paid launch explainer':'--t4','AI science and robotics':'--t7','AI model news':'--t3','Founder life':'--t6','One line take':'--t5','Reply to builders':'--t10','Link to The Rundown':'--t2'};
+  var SH={X:'X',TT:'TikTok',LI:'LI',TH:'Threads',IG:'IG'};
+  // one day
+  (function(){
+    var cols=['TT','X','LI','TH','IG'],M={};
+    CP.forEach(function(p){var h=+p.t.slice(0,2),k=p.p+'|'+h;(M[k]=M[k]||[]).push(p.ty);});
+    var g=document.getElementById('oneday');g.style.gridTemplateColumns='70px repeat('+cols.length+',minmax(120px,1fr))';
+    var h='<span class="ch"></span>'+cols.map(function(c){return '<span class="ch">'+PL[c]+'</span>';}).join('');
+    for(var i=0;i<24;i++){
+      if(!cols.some(function(pl){return (M[pl+'|'+i]||[]).length;}))continue;
+      h+='<span class="hr">'+((i%12||12)+(i<12?' am':' pm'))+'</span>';
+      cols.forEach(function(pl){var L=M[pl+'|'+i]||[];
+        if(!L.length){h+='<span class="sl"></span>';return;}
+        var c={};L.forEach(function(t){c[t]=(c[t]||0)+1});var top=Object.keys(c).sort(function(a,b){return c[b]-c[a]})[0];
+        var tip=PL[pl]+', '+((i%12||12)+(i<12?'am':'pm'))+' PT: '+L.length+' post'+(L.length>1?'s':'')+'. Mostly '+top;
+        h+='<span class="sl" title="'+esc(tip)+'"><span class="blk'+(L.length>=4?' s3':'')+'" style="--c:var('+TC[top]+')"><b>'+L.length+'</b>'+esc(top)+'</span></span>';});
+    }
+    g.innerHTML=h;
+    document.getElementById('daylegend').innerHTML=Object.keys(TC).map(function(k){return '<span class="fbtn" style="cursor:default"><i style="background:var('+TC[k]+')"></i>'+k+'</span>';}).join('');
+  })();
+  // calendar
+  var onP={},onT={};
+  function cnt(f){var m={};CP.forEach(function(p){m[p[f]]=(m[p[f]]||0)+1});return m;}
+  var cp=cnt('p'),ct=cnt('ty');
+  document.getElementById('fplat').innerHTML=Object.keys(PL).map(function(k){onP[k]=true;return '<button type="button" class="fbtn" data-p="'+k+'" aria-pressed="true">'+PL[k]+' <b>'+(cp[k]||0)+'</b></button>';}).join('');
+  document.getElementById('ftype').innerHTML=Object.keys(TC).map(function(k){onT[k]=true;return '<button type="button" class="fbtn" data-t="'+k+'" aria-pressed="true"><i style="background:var('+TC[k]+')"></i>'+k+' <b>'+(ct[k]||0)+'</b></button>';}).join('');
+  function chip(p){var h=+p.t.slice(0,2),m=p.t.slice(3),tm=(h%12||12)+':'+m+(h<12?'a':'p');
+    return '<a class="chip" style="--c:var('+TC[p.ty]+')" href="'+p.u+'" target="_blank" rel="noopener" title="'+esc(PL[p.p]+' · '+p.ty+' · '+p.ti)+'"><span class="pf">'+SH[p.p]+'</span><span class="tm">'+tm+'</span><span class="ti">'+esc(p.ti)+'</span></a>';}
+  function drawCal(){
+    var vis=CP.filter(function(p){return onP[p.p]&&onT[p.ty];}),by={};
+    vis.forEach(function(p){(by[p.d]=by[p.d]||[]).push(p);});
+    var g='',a='',d=new Date(2026,8,20),MN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],DN=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    for(var i=0;i<35;i++){
+      var key=''+d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0'),L=by[key]||[];
+      var out=key<'20260923',lab=(d.getDate()===1||i===0?MN[d.getMonth()]+' ':'')+d.getDate();
+      g+='<div class="dcell'+(out?' out':'')+(key==='20261023'?' today':'')+'"><div class="dnum"><b>'+lab+'</b><span>'+(L.length?L.length+' post'+(L.length>1?'s':''):'')+'</span></div>'+L.map(chip).join('')+'</div>';
+      if(L.length)a+='<div class="dcell"><div class="dnum"><b>'+DN[d.getDay()]+' '+MN[d.getMonth()]+' '+d.getDate()+'</b><span>'+L.length+'</span></div>'+L.map(chip).join('')+'</div>';
+      d.setDate(d.getDate()+1);
+    }
+    document.getElementById('calgrid').innerHTML=g;document.getElementById('agenda').innerHTML=a||'<p>No posts match these filters.</p>';
+  }
+  document.getElementById('fplat').addEventListener('click',function(e){var b=e.target.closest('.fbtn');if(!b)return;onP[b.dataset.p]=!onP[b.dataset.p];b.setAttribute('aria-pressed',onP[b.dataset.p]);drawCal();});
+  document.getElementById('ftype').addEventListener('click',function(e){var b=e.target.closest('.fbtn');if(!b)return;onT[b.dataset.t]=!onT[b.dataset.t];b.setAttribute('aria-pressed',onT[b.dataset.t]);drawCal();});
+  drawCal();
+  // type bars + recipes
+  var TY={"X": {"unit": "views per post", "rows": [["Copy my AI workflow", 2, 344089, "[Hook] I'm <tool> pilled.\n   or: AI is getting REALLY good at <life task>.\n\n[Proof] The recent update / I built <thing> with <model>\nthat <result>, with me as the <user>.\n\nMy <N> favorite <routines> (copy/paste these prompts):\n\nRoutine 1: <outcome in plain words>\n<one line on why it matters to you>\n\"<the full prompt, ready to paste>\"\n\n(repeat for each routine)\n\n↳ Own reply: The full workflow and prompt on <your hub>: <link>", "Optional. The wardrobe post used a 45 second 16:9 screen demo (30,915 views). The GrokBot post was text only and reached 657,263 views, about 21 times more.", "https://x.com/rowancheung/status/2108328114552000842", "I'm GrokBot pilled. My 4 favorite routines (copy/paste these prompts)"], ["One line take", 1, 27747, "[One sentence, under 15 words]\n   \"The only moat left is the ability to move\n    faster than the pace of change\"\n\nTest it first as a reply under a bigger account's post.\nIf it lands, post it alone a couple of days later.", "None. Text only. It drew 111 replies on 27,747 views.", "https://x.com/rowancheung/status/2110756703042244781", "The only moat left is the ability to move faster than the pace of change"], ["Link to The Rundown", 1, 9081, "The full workflow and prompt that I posted on\n<your owned hub>: <link>\n\nPosted 3 seconds after the main post, as a reply to it.", "None. A link card from your own site.", "https://x.com/rowancheung/status/2107859093977460785", "The full workflow and prompt that I posted on The Rundown's Community Workflow Hub"], ["Reply to builders", 5, 3757, "@founder <3 to 6 words of real praise>\n   \"You guys move FAST\"\n   \"You guys crushed it\"\n   \"Fun one. Thanks for having me!\"\n\nReply within minutes of a launch by a founder you cover.", "None.", "https://x.com/rowancheung/status/2107539996135579927", "@adcock_brett You guys move FAST"]]}, "TT": {"unit": "views per video", "rows": [["Paid launch explainer", 3, 3814682, "<Brand> just announced <product> at <event>, <one line\non what it is>.\n\n[How it works] 2 to 3 short sentences.\n\n[My test] The responsibility I handed over is <real use>.\n\n#<brand>partner", "60 to 105 seconds, vertical. Product on screen, then how to try it. The OpenAI dots video drew 11.4M views on 10.7K likes, a ratio that usually points to paid reach (inferred, not confirmed).", "https://www.tiktok.com/@rowancheung/video/7691014942849387807", "OpenAI just announced dots at DevDay, always on agents inside ChatGPT that can keep…"], ["AI science and robotics", 17, 12485, "[Emoji] + one surprising sentence.\n   \"🦂 Claude just helped design a potential scorpion antivenom.\"\n\n[How] Who built it, what it does, one number.\n[Why it matters] One line.", "About 60 to 75 seconds (average 68), vertical. Lab or robot footage, captions and voiceover. Posted once each weekday.", "https://www.tiktok.com/@rowancheung/video/7699572082392272158", "An AI system called Brain IT can reconstruct recognizable images from brain scans of…"], ["AI model news", 2, 10584, "[Quote or odd fact as the hook]\n   \"WHAT THE **** IS WRONG WITH THE ANSWERS?\"\n   \"<Model> played Minecraft for 141 hours\"\n\n[What happened] 2 sentences.\n[Why it matters] 1 sentence.", "About 60 to 70 seconds, vertical, voiceover with footage or screenshots of the model.", "https://www.tiktok.com/@rowancheung/video/7694742236331838751", "OpenAI’s GPT 6 Astra played Minecraft for 141 hours in a test by Vals AI, reportedly…"]]}, "LI": {"unit": "likes per post", "rows": [["Founder life", 1, 147, "I've been building <company> for <time>, and <milestone>.\n\nAnd until last week, <surprising fact>!\n\n[Story in short lines]\nI'll be honest, I was a little worried.\n...\nI was wrong.\n\n[Context paragraph: who helped and why]\n[One lesson]\nCan't wait to do the next one.", "One team photo.", "https://www.linkedin.com/posts/rowancheung_ive-been-building-the-rundown-for-35-years-activity-7512901689755111424-lmrc", "I've been building The Rundown for 3.5 years, and we've grown to 20+ people. And until…"], ["Copy my AI workflow", 1, 51, "My team noticed <visible change in you>.\n\nIt's because I secretly let AI <do the task> 🤫\n\n[Why you wanted it] 2 lines.\n\nHere's how:\n> step\n> step\n> step\n\nWhat it built:\n> result\n> result\n\nFull workflow + prompt in the comments.", "Screen demo video of the thing you built.", "https://www.linkedin.com/posts/rowancheung_my-team-noticed-i-stopped-wearing-the-same-activity-7513624851610320898-xpX1", "My team noticed I stopped wearing the same black t shirt every day. It's because I…"], ["Paid launch explainer", 3, 32, "<Brand> just announced <product> at <event>.\n\nI've had early access for the last few days, and\nhere's what's most important:\n\n1. <feature in plain words>\n2. <feature>\n3. <the one you're most excited about>\n\n[Question to readers]\n\nLearn more 👉 <link>\n\n#ad #<brand>partner", "The brand's launch video, or a repost of the CEO's post with your commentary on top.", "https://www.linkedin.com/posts/rowancheung_chatgptabrpartner-activity-7510776212579864577-vKJt", "OpenAI just announced dots at DevDay (#ChatGPT_Partner)"]]}, "TH": {"unit": "likes per post", "rows": [["Copy my AI workflow", 1, 11, "Same text as X, posted the same minute.\nLong steps get numbered (1/6), (2/6) so they read\nwell when Threads cuts the post.", "Same as X.", "https://www.threads.com/@rowancheung/post/DeMtLcoFB_3", "AI is getting REALLY good at building your wardrobe (cross post from X)"], ["Founder life", 1, 7, "The first 4 lines of the LinkedIn story,\nplus one closing line:\n   \"Grateful for the team and excited for what's next.\"", "Same photo as LinkedIn.", "https://www.threads.com/@rowancheung/post/DeHkYCmG6of", "I've been building The Rundown for 3.5 years, and we've grown to 20+ people. First ever…"]]}, "IG": {"unit": "comments", "rows": [["Founder life", 1, 42, "2 to 5 words, no hashtags.\n   \"q3 in the books ✅\"", "A photo carousel from the quarter.", "https://www.instagram.com/p/DdzayVADYgp/", "q3 in the books ✅ (photo carousel)"]]}};
+  var EX={"colors": {"hook": "#0C7650", "proof": "#2563EB", "list": "#7C3AED", "prompt": "#C2410C", "cta": "#DB2777", "story": "#0E7490", "tag": "#4B5563", "twist": "#A16207", "close": "#9F1239"}, "ex": {"X|Copy my AI workflow": {"url": "https://x.com/rowancheung/status/2108328114552000842", "when": "Thu Oct 8 · 3:46pm PT", "handle": "@rowancheung", "metrics": [["Views", "657,263"], ["Likes", "2,610"], ["Bookmarks", "3,162"], ["Reposts", "254"]], "segs": [["hook", "Hook", "Tool name + \"pilled\". 4 words.", "I'm GrokBot pilled."], ["proof", "Why now", "The news that makes this timely.", "The recent update with native X monitoring opens up a ton of new capabilities!"], ["list", "Promise", "A number + \"copy/paste these prompts\".", "My 4 favorite routines (copy/paste these prompts):"], ["story", "Routine title", "The outcome in plain words.", "Routine 1: Find real AI workflows on X (and skip the hype threads)"], ["story", "Why it matters", "One line on what it does for him.", "Every morning, this bot now finds real AI use cases being shared on X, and filters out the “10 prompts” hype threads."], ["prompt", "The full prompt", "Pasted in quotes, ready to copy.", "“Every weekday at 9:15am in my time zone, search X and the web for new AI workflows people are actually running … Return at most 3 … Send it to me on Slack. Do not post or reply anywhere else. Save this as a routine.”"], ["list", "Repeat ×3", "Same shape for every routine.", "Routine 2: Catch every mention of your brand\nRoutine 3: Find people actively looking for what you do\nRoutine 4: Never lose a new contact again"]], "quote": "Quoting @bot: “Grok Bot can now search, read, and monitor X.” (5.9M views)", "media": null}, "X|One line take": {"url": "https://x.com/rowancheung/status/2110756703042244781", "when": "Thu Oct 15 · 8:36am PT", "handle": "@rowancheung", "metrics": [["Views", "27,747"], ["Replies", "111"], ["Likes", "119"]], "segs": [["hook", "The whole post", "One sentence, under 15 words, a strong opinion.", "The only moat left is the ability to move faster than the pace of change"]], "before": {"when": "Tue Oct 13 · 8:53am PT", "text": "@Bencera the only moat is the ability to move faster than the pace of change", "note": "Tested first as a reply under another founder's post (2,289 views). Two days later he posted it alone."}, "media": null}, "X|Link to The Rundown": {"url": "https://x.com/rowancheung/status/2107859093977460785", "when": "Wed Oct 7 · 8:42am PT", "handle": "@rowancheung", "parent": "AI is getting REALLY good at building your wardrobe. I built an app with GPT 6 Astra that picks my outfit every morning…", "metrics": [["Views", "9,081"], ["Bookmarks", "22"], ["Posted", "3 seconds after the main post"]], "segs": [["cta", "Pointer", "Says what is behind the link.", "The full workflow and prompt that I posted on The Rundown's Community Workflow Hub:"]], "card": "app.therundown.ai · Build a Weather Aware Personal Wardrobe App with GPT 6 Astra", "media": null}, "X|Reply to builders": {"url": "https://x.com/rowancheung/status/2107539996135579927", "when": "Oct 5 to Oct 13", "handle": "@rowancheung", "metrics": [["Replies in month", "5"], ["Average views", "3,757"]], "replies": [["@adcock_brett", "You guys move FAST", "8,458 views"], ["@chrisparkX", "You guys crushed it", "4,261 views"], ["@markbrazil", "Fun one. Thanks for having me!", "2,181 views"]], "segs": [], "media": null}, "TT|Paid launch explainer": {"url": "https://www.tiktok.com/@rowancheung/video/7691014942849387807", "when": "Tue Sep 29 · 10:46am PT", "handle": "@rowancheung", "metrics": [["Views", "11,438,770"], ["Likes", "10,749"], ["Length", "105s"]], "segs": [["hook", "News hook", "Brand + \"just announced\" + event.", "OpenAI just announced dots at DevDay,"], ["proof", "What it is", "One line in plain words.", "always on agents inside ChatGPT that can keep working on an ongoing responsibility and come back when something needs your attention."], ["story", "How it works", "The mechanism, short.", "Powered by GPT 6 Astra, dots have their own computer and use the context you share and the apps you connect to keep work moving between conversations."], ["twist", "My test", "What he personally used it for.", "The responsibility I handed over is keeping track of subscriptions, comparing overlapping tools, and catching potential wasted spend before the next renewal."], ["close", "Question", "Invites comments.", "What ongoing responsibility will you give your dots?"], ["cta", "Call to action", "Points to the bio link.", "Click the link in my bio to set up dots and try it for yourself."], ["tag", "Disclosure", "Partner tag.", "@ChatGPT #ChatGPT_Partner"]], "media": "▶ 105 second vertical video · product on screen"}, "TT|AI model news": {"url": "https://www.tiktok.com/@rowancheung/video/7694742236331838751", "when": "Fri Oct 9 · 11:50am PT", "handle": "@rowancheung", "metrics": [["Views", "18,962"], ["Likes", "594"], ["Length", "70s"]], "segs": [["hook", "Odd fact hook", "A model doing something human.", "OpenAI’s GPT 6 Astra played Minecraft for 141 hours in a test by Vals AI, reportedly progressing further than any previous AI system."], ["story", "What happened", "A tiny story with a turn.", "It built a resource farm and collected valuable items, until a creeper destroyed its storage chest and bed. Afterward, it spent hours mostly farming potatoes…"], ["proof", "Why it matters", "The real lesson, hedged.", "That doesn’t prove the model felt fear or disappointment, but it highlights a challenge for autonomous AI… recovering from setbacks and returning to the task."], ["close", "Punchline", "End on a smile.", "For a few hours, all that intelligence was going into potatoes."]], "media": "▶ 70 second vertical video · gameplay footage + voiceover"}, "TT|AI science and robotics": {"url": "https://www.tiktok.com/@rowancheung/video/7699572082392272158", "when": "Thu Oct 22 · 12:12pm PT", "handle": "@rowancheung", "metrics": [["Views", "86,031"], ["Likes", "6,316"], ["Saves", "1,177"], ["Length", "73s"]], "segs": [["hook", "Wow hook", "What the AI can do, in one line.", "An AI system called Brain IT can reconstruct recognizable images from brain scans of people looking at pictures."], ["story", "Who + how", "Lab name and the mechanism.", "Developed at the Weizmann Institute, it predicts both image content and layout, then uses a diffusion model to generate the reconstruction."], ["proof", "The number", "One concrete stat.", "With one hour of scans from a new person, it achieved results comparable to earlier systems trained on 40 hours."], ["twist", "Honest flaw", "Keeps it credible and fun.", "But it still makes mistakes: one reconstruction turned a dog into a goat."], ["close", "What is next", "Future hook.", "Reconstructing dreams is a future ambition."], ["tag", "Source", "Study title and DOI.", "Study: “Brain IT: Image Reconstruction from fMRI…” DOI: 10.48550/arXiv.2510.25976"]], "media": "▶ 73 second vertical video · lab footage + captions"}, "LI|Founder life": {"url": "https://www.linkedin.com/posts/rowancheung_ive-been-building-the-rundown-for-35-years-activity-7512901689755111424-lmrc", "when": "Mon Oct 5 · 8:49am PT", "handle": "Founder of the largest AI newsletter", "metrics": [["Likes", "147"], ["Comments", "19"]], "segs": [["hook", "Milestone", "Time spent + size now.", "I've been building The Rundown for 3.5 years, and we've grown to 20+ people."], ["twist", "Twist", "The surprising fact.", "And until last week, we'd never all been in the same room!"], ["story", "Scene", "Where, who, one vivid detail.", "This was our first ever team retreat, in Lisbon. People flew in from Canada, Switzerland, Seattle … One person traveled over 27 hours to be there."], ["proof", "Honest worry", "Admit a fear, then flip it.", "I'll be honest, I was a little worried. … I was wrong."], ["story", "Context", "The business story behind it.", "Earlier this year, I sold a stake in The Rundown AI and partnered with Electrify to take us from newsletters to multi platform media."], ["close", "Lesson + close", "One line lesson, warm ending.", "But a few days in person did something Slack never could. … Can't wait to do the next one."]], "media": "📷 One team photo from the retreat"}, "LI|Copy my AI workflow": {"url": "https://www.linkedin.com/posts/rowancheung_my-team-noticed-i-stopped-wearing-the-same-activity-7513624851610320898-xpX1", "when": "Wed Oct 7 · 8:42am PT", "handle": "Founder of the largest AI newsletter", "metrics": [["Likes", "51"], ["Comments", "36"]], "segs": [["hook", "Curiosity", "Something people noticed about you.", "My team noticed I stopped wearing the same black t shirt every day."], ["twist", "Reveal", "The secret, with an emoji.", "It's because I secretly let AI redesign my entire wardrobe 🤫"], ["story", "Why", "The personal problem.", "I want to dress better. But my worst nightmare is a closet full of clothes that adds more clutter to my brain..."], ["list", "Here's how", "Steps as \">\" bullets.", "> Uploaded a few full body photos and one clear face photo\n> Gave it my height, sizes, and niche details\n> Told it the colors I like and the ones I refuse\n> Pasted one master prompt and let it build for 1 to 2 hours"], ["proof", "What it built", "Results as \">\" bullets.", "> 30 looks total. 7 per season, plus 1 gym and 1 lounge\n> A homepage that checks the weather and picks today's look\n> Virtual try ons where I'm the model in every photo"], ["close", "Close", "Light, human.", "One less decision every morning :^)"], ["cta", "Call to action", "Pushes people into comments.", "Full workflow + prompt in the comments."]], "media": "▶ Screen demo video of the app"}, "LI|Paid launch explainer": {"url": "https://www.linkedin.com/posts/rowancheung_chatgptabrpartner-activity-7510776212579864577-vKJt", "when": "Tue Sep 29 · 12:03pm PT", "handle": "Brand partnership · Founder of the largest AI newsletter", "metrics": [["Likes", "52"], ["Comments", "16"]], "segs": [["hook", "News hook", "Brand + \"just announced\" + event.", "OpenAI just announced dots at DevDay, always on agents inside ChatGPT…"], ["proof", "Early access", "Why you are credible.", "I've had early access for the last few days, and the job I gave to my dot was helping manage the AI tools I test and use."], ["story", "Mini story", "One real moment of use.", "My dot flagged an upcoming renewal while I was testing other tools. It compared that subscription with tools I wanted to keep…"], ["twist", "Control", "Answers the obvious worry.", "You choose your dot’s access and set approval boundaries. Mine was simple: investigate and recommend, but don’t cancel anything without my approval."], ["close", "Question", "Invites comments.", "What ongoing responsibility would you give your dot?"], ["cta", "Link", "Emoji pointer + link.", "Learn more and try out dots in ChatGPT 👉 lnkd.in/…"], ["tag", "Disclosure", "Partner tag.", "#ChatGPT_Partner"]], "media": "▶ OpenAI launch video"}, "TH|Copy my AI workflow": {"url": "https://www.threads.com/@rowancheung/post/DeMtLcoFB_3", "when": "Wed Oct 7 · 8:42am PT", "handle": "@rowancheung", "metrics": [["Likes", "11"], ["Replies", "14"]], "segs": [["hook", "Hook", "Same as X.", "AI is getting REALLY good at building your wardrobe."], ["proof", "Proof", "What he built.", "I built an app with GPT 6 Astra that picks my outfit every morning based on live weather, with me as the model."], ["list", "Steps", "Copied from X.", "It's super simple to do:\n> Upload a few full body photos and one face photo\n> Add your height, sizes, and fit notes\n> List the colors you like and the ones you refuse\n> Paste the master prompt and let it build for 1 to 2 hours"], ["close", "Close", "", "One less decision every morning :^)"]], "media": "Posted 32 seconds after the X version"}, "TH|Founder life": {"url": "https://www.threads.com/@rowancheung/post/DeHkYCmG6of", "when": "Mon Oct 5 · 8:49am PT", "handle": "@rowancheung", "metrics": [["Likes", "7"], ["Replies", "4"]], "segs": [["hook", "Milestone", "First lines of the LinkedIn post.", "I've been building The Rundown for 3.5 years, and we've grown to 20+ people."], ["twist", "Twist", "", "And until last week, we'd never all been in the same room!"], ["story", "Scene", "", "This was our first ever team retreat, in Lisbon."], ["close", "Close", "A new one line ending.", "Grateful for the team and excited for what's next."]], "media": "Posted 6 seconds after the LinkedIn version"}, "IG|Founder life": {"url": "https://www.instagram.com/p/DdzayVADYgp/", "when": "Sun Sep 27 · 1:00pm PT", "handle": "rowancheung", "metrics": [["Comments", "42"], ["Likes", "hidden"]], "segs": [["hook", "Caption", "2 to 5 words, no hashtags.", "q3 in the books ✅"]], "media": "📷 Photo carousel from the quarter"}}};
+  var KC={hook:'--t1',proof:'--t2',list:'--t3',prompt:'--t4',cta:'--t6',story:'--t7',tag:'--t10',twist:'--t9',close:'--t5'};
+  Object.keys(TY).forEach(function(k){
+    var rows=TY[k].rows,unit=TY[k].unit,mx=rows[0][2]||1,box=document.getElementById('bars-'+k),h='';
+    rows.forEach(function(r,i){h+='<button type="button" class="bar" data-i="'+i+'" aria-pressed="'+(i===0)+'"><span>'+esc(r[0])+' <span class="label">n='+r[1]+'</span></span><span class="track"><span class="fill" style="display:block;width:'+Math.max(1.5,r[2]/mx*100).toFixed(1)+'%;background:var('+TC[r[0]]+')"></span></span><span class="v">'+fmtN(r[2])+'</span><span class="go" aria-hidden="true">›</span></button>';});
+    box.innerHTML=h;
+    function sel(i){var r=rows[i],ex=EX.ex[k+'|'+r[0]];
+      [].forEach.call(box.children,function(el,j){el.setAttribute('aria-pressed',j===i);});
+      document.getElementById('rt-'+k).textContent='Recipe: '+r[0];
+      document.getElementById('rm-'+k).textContent=r[1]+' post'+(r[1]>1?'s':'')+', average '+r[2].toLocaleString('en-US')+' '+unit+'. Below is his best real post of this type, broken into parts.';
+      var st=document.getElementById('st-'+k), seen=[], sh='';
+      ex.segs.forEach(function(g,j){sh+=(j?'<span class="arr">→</span>':'')+'<span class="spill" style="--k:var('+KC[g[0]]+')">'+(j+1)+' '+esc(g[1])+'</span>';});
+      st.innerHTML=sh;
+      var c='<div class="exhead"><span class="av">RC</span><span class="exname"><b>Rowan Cheung</b><span>'+esc(ex.handle)+' · '+esc(ex.when)+'</span></span><span class="plat">'+PL[k]+'</span></div>';
+      if(ex.parent)c+='<div class="parent">Replying to his own post: '+esc(ex.parent)+'</div>';
+      if(ex.before)c+='<div class="before"><span class="label">First tried as a reply · '+esc(ex.before.when)+'</span><p>'+esc(ex.before.text)+'</p><small>'+esc(ex.before.note)+'</small></div><div class="arrdown">↓ two days later, as its own post</div>';
+      ex.segs.forEach(function(g,j){c+='<div class="seg" style="--k:var('+KC[g[0]]+')"><div class="seglab"><span class="spill">'+(j+1)+' '+esc(g[1])+'</span>'+(g[2]?'<small>'+esc(g[2])+'</small>':'')+'</div><p>'+esc(g[3])+'</p></div>';});
+      if(ex.replies)c+=ex.replies.map(function(x){return '<div class="seg" style="--k:var(--t10)"><div class="seglab"><span class="spill">Tag '+esc(x[0])+'</span><small>'+esc(x[2])+'</small></div><p>'+esc(x[1])+'</p></div>';}).join('')+'<p class="src">Pattern: tag the founder, 3 to 6 words of real praise, within minutes of their launch.</p>';
+      if(ex.card)c+='<div class="lcard">🔗 '+esc(ex.card)+'</div>';
+      if(ex.quote)c+='<div class="lcard">↪ '+esc(ex.quote)+'</div>';
+      if(ex.media)c+='<a class="media" href="'+ex.url+'" target="_blank" rel="noopener">'+esc(ex.media)+' · Open on '+PL[k]+' ↗</a>';
+      c+='<div class="met">'+ex.metrics.map(function(m){return '<span>'+esc(m[0])+' <b>'+esc(m[1])+'</b></span>';}).join('')+'</div>';
+      c+='<button class="copy" data-for="ex-'+k+'">Copy text</button>';
+      document.getElementById('ex-'+k).innerHTML=c;
+      document.getElementById('re-'+k).innerHTML='Open the real post: <a href="'+ex.url+'" target="_blank" rel="noopener">'+esc(r[6])+'</a>';
+    }
+    box.addEventListener('click',function(e){var bt=e.target.closest('.bar');if(bt)sel(+bt.dataset.i);});
+    sel(0);
+  });
+  // breakdowns
+  var BD={"TT": [{"u": "https://www.tiktok.com/@rowancheung/video/7699948958558326046", "d": "20261023", "t": "12:34", "ty": "AI science and robotics", "m": {"views": 1276, "likes": 48, "dur": 69.775}, "about": "Claude designed proteins that bind scorpion toxins", "hook": "🦂 Claude just helped design a potential scorpion antivenom.", "st": ["Emoji + wow claim", "Speed number (64 hours, 318,000 designs)", "Who did it", "What the proteins do", "Caveat: binding is not neutralizing", "Open question"], "src": "Anthropic and Citrini Research paper", "note": "Posted a few hours before this data was pulled, so the 1,276 views are still early."}, {"u": "https://www.tiktok.com/@rowancheung/video/7699572082392272158", "d": "20261022", "t": "12:12", "ty": "AI science and robotics", "m": {"views": 86031, "likes": 6316, "dur": 72.9}, "about": "An AI that rebuilds images from brain scans", "hook": "An AI system called Brain IT can reconstruct recognizable images from brain scans", "st": ["Wow claim", "Lab name", "How it works", "Proof number (1 hour vs 40 hours)", "Funny flaw (dog became a goat)", "Future: dreams"], "src": "Weizmann Institute study, arXiv DOI", "note": "Best TikTok of the month without paid reach: 86,031 views, 1,177 saves. The funny flaw makes it shareable."}, {"u": "https://www.tiktok.com/@rowancheung/video/7699158820265757982", "d": "20261021", "t": "09:28", "ty": "AI science and robotics", "m": {"views": 7659, "likes": 441, "dur": 59.489}, "about": "A human vs humanoid robot cage fight gets a legal letter", "hook": "🥊 This robot cage fight just got hit with a cease and desist letter.", "st": ["Emoji + conflict", "What happened in the fight", "How the robots were piloted", "The regulator's view", "The company's argument", "Question to viewers"], "src": "Not named in the caption (news of the event and the California athletic commission)", "note": "Ends on a debate question to pull comments."}, {"u": "https://www.tiktok.com/@rowancheung/video/7698855705037622558", "d": "20261020", "t": "13:52", "ty": "Paid launch explainer", "m": {"views": 2318, "likes": 68, "dur": 56.683}, "about": "How his team built a marketing budget bot with Grok Bot (paid)", "hook": "We built an AI Bot to help our team decide where our marketing budget should go.", "st": ["Team story hook", "Who uses it (Rishi, paid media)", "What it does", "Where it sends answers (Slack)", "Comment \"Bot\" for the template", "#GrokPartner tag"], "src": "His own team's workflow (sponsored by Grok)", "note": "Paid post that uses a comment keyword to trade a template for engagement."}, {"u": "https://www.tiktok.com/@rowancheung/video/7698492226560625950", "d": "20261019", "t": "14:21", "ty": "AI science and robotics", "m": {"views": 4232, "likes": 206, "dur": 60.534}, "about": "Living rat brain cells used to design better AI", "hook": "🐀 Scientists are using living rat brain cells to explore better ways to build artificial intelligence.", "st": ["Emoji + strange fact", "Company and method", "Where the software runs", "Big partner (AWS)", "Caveat: unproven claims", "Bigger question"], "src": "The Biological Computing Company announcement", "note": "Strange science gets the click, the caveat keeps trust."}, {"u": "https://www.tiktok.com/@rowancheung/video/7697394195018894623", "d": "20261016", "t": "15:20", "ty": "AI science and robotics", "m": {"views": 2064, "likes": 80, "dur": 64.318}, "about": "AI designed antibodies to stop future pandemics", "hook": "🦠 Red Queen Bio is using AI to develop antibody drugs that could help stop future pandemics", "st": ["Emoji + stakes", "First target (influenza)", "Lab and AI loop", "Goal: stockpile before outbreaks", "Caveat: human trials in 2027"], "src": "Red Queen Bio company news", "note": ""}, {"u": "https://www.tiktok.com/@rowancheung/video/7696998957444009246", "d": "20261015", "t": "13:47", "ty": "AI science and robotics", "m": {"views": 12197, "likes": 567, "dur": 74.651}, "about": "A robot lab that discovers new materials", "hook": "Scientists in Germany have built E MAP, a robotic lab", "st": ["Who and what", "What it makes", "Why the setup matters", "AI picks the next experiment", "Future: faster discovery"], "src": "Karlsruhe Institute of Technology", "note": ""}, {"u": "https://www.tiktok.com/@rowancheung/video/7696651873255755039", "d": "20261014", "t": "15:20", "ty": "AI science and robotics", "m": {"views": 1189, "likes": 46, "dur": 67.778}, "about": "Open source AI turns scans into 3D heart models for kids", "hook": "Children’s Hospital of Philadelphia is using NVIDIA backed open source AI", "st": ["Trusted institution", "Before vs after (4 hours to seconds)", "Why doctors care", "What is still in progress", "Future: virtual heart tests"], "src": "Children's Hospital of Philadelphia, NVIDIA", "note": "Lowest views of the month (1,189). Institution first, no wow line."}, {"u": "https://www.tiktok.com/@rowancheung/video/7696252834152582430", "d": "20261013", "t": "13:31", "ty": "AI science and robotics", "m": {"views": 10971, "likes": 468, "dur": 69.821}, "about": "Why folding laundry is a hard robotics test", "hook": "Why is laundry such a big deal in robotics?", "st": ["Question hook", "Why it is hard", "Company demo (Dyna Taku)", "What the robot does", "Next step: customer sites"], "src": "Dyna Robotics demo video", "note": "A question hook. 10,971 views, above the median."}, {"u": "https://www.tiktok.com/@rowancheung/video/7695791071283940638", "d": "20261012", "t": "08:30", "ty": "AI science and robotics", "m": {"views": 13134, "likes": 806, "dur": 74.744}, "about": "ITER, the largest fusion reactor ever attempted", "hook": "This is the largest nuclear fusion project ever attempted.", "st": ["Superlative hook", "Scale (10x hotter than the Sun)", "How it works", "Who is involved", "Problems (delays, cost)", "Why it still matters"], "src": "ITER project", "note": "Superlative hook. 13,134 views."}, {"u": "https://www.tiktok.com/@rowancheung/video/7694742236331838751", "d": "20261009", "t": "11:50", "ty": "AI model news", "m": {"views": 18962, "likes": 594, "dur": 70.1}, "about": "GPT 6 Astra played Minecraft for 141 hours", "hook": "OpenAI’s GPT 6 Astra played Minecraft for 141 hours", "st": ["Odd fact hook", "What it achieved", "The setback (a creeper)", "Funny aftermath (potatoes)", "Real lesson about agents", "Punchline"], "src": "Vals AI test", "note": "Story with a funny turn. 18,962 views."}, {"u": "https://www.tiktok.com/@rowancheung/video/7694363593218837791", "d": "20261008", "t": "11:20", "ty": "AI science and robotics", "m": {"views": 11100, "likes": 611, "dur": 59.14}, "about": "A robot hand that walks on its fingers", "hook": "Researchers at ETH Zurich have turned a commercial robotic hand into a crawling machine", "st": ["Who and what", "How it learned (simulation)", "Numbers (14 surfaces, 21 of 25 recoveries)", "Future use", "Caveat"], "src": "ETH Zurich study, arXiv DOI", "note": ""}, {"u": "https://www.tiktok.com/@rowancheung/video/7694000523317398814", "d": "20261007", "t": "11:51", "ty": "AI model news", "m": {"views": 2205, "likes": 93, "dur": 67.035}, "about": "A Claude model swore at a CAPTCHA, then uploaded malware", "hook": "\"WHAT THE **** IS WRONG WITH THE ANSWERS?\"", "st": ["Shocking quote", "Context (security test)", "What happened next", "Lesson about bot detection", "What it means for you"], "src": "Not named in the caption (an Anthropic safety test incident)", "note": "Quote hook. Only 2,205 views, so a strong quote alone was not enough."}, {"u": "https://www.tiktok.com/@rowancheung/video/7693620770127334686", "d": "20261006", "t": "11:18", "ty": "AI science and robotics", "m": {"views": 4416, "likes": 249, "dur": 69.078}, "about": "NASA and IBM's AI model for the Moon", "hook": "NASA and IBM just gave the Moon its own AI model.", "st": ["Big names + playful line", "Training data", "What it can find (water ice)", "Why ice matters", "Proof number (22% less error)", "Caveat + open access"], "src": "NASA and IBM release", "note": ""}, {"u": "https://www.tiktok.com/@rowancheung/video/7693201667973664030", "d": "20261005", "t": "08:12", "ty": "AI science and robotics", "m": {"views": 2566, "likes": 94, "dur": 67.569}, "about": "A fruit fly's brain map used to drive Doom and cars", "hook": "A fruit fly’s neural wiring is becoming the blueprint for some very unusual experiments.", "st": ["Strange fact", "The data (166,000 neurons)", "What developers built", "Funny detail (blinkers)", "Caveat", "Anyone can try it"], "src": "Google connectome release + developer projects", "note": ""}, {"u": "https://www.tiktok.com/@rowancheung/video/7692192578724252959", "d": "20261002", "t": "14:56", "ty": "Paid launch explainer", "m": {"views": 2959, "likes": 86, "dur": 66.049}, "about": "DoorDash's new AI tools (paid)", "hook": "DoorDash just introduced some new AI tools at its Dash Forward event", "st": ["Brand + event", "Feature 1: order by text", "Feature 2 and 3", "Drone and robot delivery", "What it means for you", "#doordashpartner"], "src": "DoorDash Dash Forward event (sponsor)", "note": "Paid post, no big reach (2,959 views)."}, {"u": "https://www.tiktok.com/@rowancheung/video/7691735620825222430", "d": "20261001", "t": "09:23", "ty": "AI science and robotics", "m": {"views": 1009, "likes": 40, "dur": 64.922}, "about": "A brain implant lets paralyzed people speak through an avatar", "hook": "A brain implant is letting people with paralysis control a digital avatar", "st": ["Human impact hook", "Who and how (253 electrodes)", "How signals become speech", "Caveat: limited phrases", "Emotional future"], "src": "UC San Francisco study", "note": ""}, {"u": "https://www.tiktok.com/@rowancheung/video/7691014942849387807", "d": "20260929", "t": "10:46", "ty": "Paid launch explainer", "m": {"views": 11438770, "likes": 10749, "dur": 104.982}, "about": "OpenAI dots, always on agents in ChatGPT (paid)", "hook": "OpenAI just announced dots at DevDay", "st": ["Brand + event", "What it is", "How it works", "His own test", "Control and safety", "Question", "Link in bio", "#ChatGPT_Partner"], "src": "OpenAI DevDay (sponsor) + his early access", "note": "11,438,770 views on 10,749 likes. That ratio suggests paid promotion (inferred)."}, {"u": "https://www.tiktok.com/@rowancheung/video/7690565749739392286", "d": "20260928", "t": "07:00", "ty": "AI science and robotics", "m": {"views": 45807, "likes": 1662, "dur": 63.553}, "about": "A startup turning the whole house into a robot", "hook": "Japanese startup MW (pronounced “mu”) wants to turn the house itself into a robot.", "st": ["Bold idea", "How it works (ceiling arms)", "Trade off", "Demo", "Caveat: remote controlled", "Target date 2028"], "src": "MW startup demo in Tokyo", "note": "Second best organic video: 45,807 views. Home robots and chores travel well."}, {"u": "https://www.tiktok.com/@rowancheung/video/7689500100925705502", "d": "20260925", "t": "08:48", "ty": "AI science and robotics", "m": {"views": 4675, "likes": 212, "dur": 66.083}, "about": "Skild AI robots learn a chore from one video", "hook": "Skild AI’s S1 model lets robots tackle unfamiliar tasks after seeing a single video demonstration", "st": ["Claim", "Demo tasks", "How (in context learning)", "Funny swap (cup for watering can)", "Caveat: company reported", "Payoff"], "src": "Skild AI announcement", "note": ""}, {"u": "https://www.tiktok.com/@rowancheung/video/7689132005291773215", "d": "20260924", "t": "08:59", "ty": "AI science and robotics", "m": {"views": 2156, "likes": 91, "dur": 65.108}, "about": "Google's AI weather model beats top forecasters", "hook": "Google’s new AI weather model is beating some of the world’s best forecasting systems.", "st": ["Claim", "How it works", "Proof (5 km vs 25 km grid)", "Energy use case", "Where you will see it", "Everyday benefit"], "src": "Google WeatherNext 3 release", "note": ""}, {"u": "https://www.tiktok.com/@rowancheung/video/7688779929223318815", "d": "20260923", "t": "10:13", "ty": "AI science and robotics", "m": {"views": 1770, "likes": 77, "dur": 67.5}, "about": "AI found the cause of a child's epilepsy", "hook": "AI helped researchers uncover a likely cause of a child’s severe epilepsy", "st": ["Human story hook", "The tool (AlphaGenome Atlas)", "What it flagged", "Why old tests missed it", "Lab confirmation", "Bigger impact"], "src": "Google DeepMind paper", "note": ""}], "X": [{"u": "https://x.com/rowancheung/status/2110756703042244781", "d": "20261015", "t": "08:36", "ty": "One line take", "m": {"views": 27747, "likes": 119, "bm": 11, "replies": 111}, "about": "An opinion on the only moat left in AI", "hook": "The only moat left is the ability to move faster than the pace of change", "st": ["One sentence take"], "src": "His own opinion, tested first as a reply", "note": "111 replies on 27,747 views."}, {"u": "https://x.com/rowancheung/status/2108328114552000842", "d": "20261008", "t": "15:46", "ty": "Copy my AI workflow", "m": {"views": 657263, "likes": 2610, "bm": 3162, "replies": 241}, "about": "Four Grok Bot routines with full copy and paste prompts", "hook": "I'm GrokBot pilled.", "st": ["Hook: tool + pilled", "Why now (new update)", "Promise: 4 routines", "Routine title", "Why it matters", "Full prompt", "Repeat ×4"], "src": "His own use of Grok Bot, quoting @bot's launch post", "note": "Best post of the month: 657,263 views, 3,162 bookmarks. Text only, posted the day after the launch."}, {"u": "https://x.com/rowancheung/status/2107859082036334613", "d": "20261007", "t": "08:42", "ty": "Copy my AI workflow", "m": {"views": 30915, "likes": 96, "bm": 110, "replies": 65}, "about": "A wardrobe app he built with GPT 6 Astra", "hook": "AI is getting REALLY good at building your wardrobe.", "st": ["Trend hook", "What he built", "\"Super simple\" steps as > bullets", "Light close", "Self reply with the full prompt"], "src": "His own project", "note": "45 second demo video. 30,915 views. Cross posted to Threads and LinkedIn the same minute."}], "LI": [{"u": "https://www.linkedin.com/posts/rowancheung_my-team-noticed-i-stopped-wearing-the-same-activity-7513624851610320898-xpX1", "d": "20261007", "t": "08:42", "ty": "Copy my AI workflow", "m": {"likes": 51, "comments": 36}, "about": "How AI redesigned his wardrobe", "hook": "My team noticed I stopped wearing the same black t shirt every day.", "st": ["Curiosity hook", "Secret reveal", "Personal why", "Here's how (bullets)", "What it built (bullets)", "Close", "Workflow in the comments"], "src": "His own project", "note": "Most comments on LinkedIn (36). Same project as X, rewritten as a story."}, {"u": "https://www.linkedin.com/posts/rowancheung_doordashpartner-activity-7512945041888317440-8kT4", "d": "20261005", "t": "11:41", "ty": "Paid launch explainer", "m": {"likes": 21, "comments": 19}, "about": "DoorDash's new AI tools (paid)", "hook": "DoorDash just introduced some new AI tools at its Dash Forward event", "st": ["Brand + event", "Feature 1", "Feature 2 and 3", "Delivery tech", "What it means", "2 links", "#doordashpartner"], "src": "DoorDash Dash Forward (sponsor)", "note": ""}, {"u": "https://www.linkedin.com/posts/rowancheung_ive-been-building-the-rundown-for-35-years-activity-7512901689755111424-lmrc", "d": "20261005", "t": "08:49", "ty": "Founder life", "m": {"likes": 147, "comments": 19}, "about": "The Rundown's first team retreat in Lisbon", "hook": "I've been building The Rundown for 3.5 years, and we've grown to 20+ people.", "st": ["Milestone", "Twist", "Scene", "Honest worry, then flip", "Business context (Electrify stake)", "Lesson", "Warm close"], "src": "His own company", "note": "Top LinkedIn post: 147 likes."}, {"u": "https://www.linkedin.com/posts/rowancheung_chatgptabrpartner-activity-7510776212579864577-vKJt", "d": "20260929", "t": "12:03", "ty": "Paid launch explainer", "m": {"likes": 52, "comments": 16}, "about": "OpenAI dots (paid)", "hook": "OpenAI just announced dots at DevDay", "st": ["News hook", "Early access", "Mini story", "Control", "Question", "Link", "#ChatGPT_Partner"], "src": "OpenAI DevDay (sponsor)", "note": ""}, {"u": "https://www.linkedin.com/posts/rowancheung_were-building-copilot-as-a-new-os-for-work-activity-7510363959825231872-sqdO", "d": "20260928", "t": "08:45", "ty": "Paid launch explainer", "m": {"likes": 24, "comments": 9}, "about": "Microsoft Copilot update, on top of Satya Nadella's post (paid)", "hook": "A ton of hidden gems in the Copilot update from Microsoft.", "st": ["Insider hook", "Early look", "3 numbered features", "Summary line", "Link", "#ad #microsoftpartner"], "src": "Microsoft announcement (sponsor), repost of Satya Nadella", "note": "Riding a CEO post: Satya's original had 13,477 likes."}], "TH": [{"u": "https://www.threads.com/@rowancheung/post/DeMtLcoFB_3", "d": "20261007", "t": "08:42", "ty": "Copy my AI workflow", "m": {"likes": 11, "replies": 14}, "about": "Wardrobe app, copied from X", "hook": "AI is getting REALLY good at building your wardrobe.", "st": ["Same as X"], "src": "Cross post", "note": "32 seconds after X."}, {"u": "https://www.threads.com/@rowancheung/post/DeHkYCmG6of", "d": "20261005", "t": "08:49", "ty": "Founder life", "m": {"likes": 7, "replies": 4}, "about": "Team retreat, short version", "hook": "I've been building The Rundown for 3.5 years", "st": ["First 4 lines of LinkedIn", "New one line close"], "src": "Cross post", "note": "6 seconds after LinkedIn."}], "IG": [{"u": "https://www.instagram.com/p/DdzayVADYgp/", "d": "20260927", "t": "13:00", "ty": "Founder life", "m": {"comments": 42}, "about": "Quarter recap photo dump", "hook": "q3 in the books ✅", "st": ["Photos", "4 word caption"], "src": "His own life", "note": ""}]};
+  var MKEY={X:'views',TT:'views',LI:'likes',TH:'likes',IG:'comments'};
+  Object.keys(BD).forEach(function(k){
+    var box=document.getElementById('bd-'+k); if(!box)return;
+    box.innerHTML=BD[k].map(function(r,i){
+      var dt=new Date(+r.d.slice(0,4),+r.d.slice(4,6)-1,+r.d.slice(6)), DN=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'], MN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      var h=+r.t.slice(0,2), when=DN[dt.getDay()]+' '+MN[dt.getMonth()]+' '+dt.getDate()+' · '+(h%12||12)+':'+r.t.slice(3)+(h<12?'am':'pm')+' PT';
+      var mv=r.m[MKEY[k]]; var fmt=r.m.dur?Math.round(r.m.dur)+'s video':(k==='IG'?'Photo carousel':'Text post');
+      return '<details class="bd" style="--c:var('+TC[r.ty]+')"'+(i===0?' open':'')+'><summary><span class="bdty">'+esc(r.ty)+'</span><span class="bdab">'+esc(r.about)+'</span><span class="bdm">'+(mv!=null?Number(mv).toLocaleString('en-US')+' '+MKEY[k]:'')+'</span></summary>'
+        +'<div class="bdgrid">'
+        +'<div><span class="label">When</span><p>'+when+'</p></div>'
+        +'<div><span class="label">Format</span><p>'+fmt+'</p></div>'
+        +'<div class="wide"><span class="label">Hook (first line)</span><p class="hookq">“'+esc(r.hook)+'”</p></div>'
+        +'<div class="wide"><span class="label">Structure</span><div class="struct">'+r.st.map(function(x,j){return (j?'<span class="arr">→</span>':'')+'<span class="spill" style="--k:var(--c)">'+(j+1)+' '+esc(x)+'</span>';}).join('')+'</div></div>'
+        +'<div class="wide"><span class="label">Source of information</span><p>'+esc(r.src)+'</p></div>'
+        +(r.note?'<div class="wide"><span class="label">What to learn</span><p>'+esc(r.note)+'</p></div>':'')
+        +'<div class="wide"><a href="'+r.u+'" target="_blank" rel="noopener">Open the post ↗</a></div>'
+        +'</div></details>';
+    }).join('');
+  });
+  document.addEventListener('click',function(e){var b=e.target.closest('.bdall');if(!b)return;var ds=document.querySelectorAll('#bd-'+b.dataset.pl+' details'),open=b.textContent==='Expand all';[].forEach.call(ds,function(d){d.open=open});b.textContent=open?'Collapse all':'Expand all';});
+  // tabs
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function show(id){tabs.forEach(function(t){var on=t.id===id;t.setAttribute('aria-selected',on);document.getElementById(t.getAttribute('aria-controls')).hidden=!on;});}
+  tabs.forEach(function(t){t.addEventListener('click',function(){show(t.id);});});
+  var map={x:'t-X',tiktok:'t-TT',linkedin:'t-LI',threads:'t-TH',instagram:'t-IG'},hash=(location.hash||'').slice(1);if(map[hash])show(map[hash]);
+  // copy
+  document.addEventListener('click',function(e){var btn=e.target.closest('.copy');if(!btn)return;
+    var el=document.getElementById(btn.dataset.for),ps=el.querySelectorAll('.seg p'),txt=ps.length?[].map.call(ps,function(p){return p.textContent}).join('\n\n'):el.innerText;
+    var done=function(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy'},1500)};
+    function selr(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done,selr);}else selr();});
+})();
+</script></body></html>
