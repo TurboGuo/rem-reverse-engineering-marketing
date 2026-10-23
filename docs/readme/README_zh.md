@@ -47,10 +47,7 @@ npx skills add TurboGuo/rem-reverse-engineering-marketing
 
 也可以直接把 [`skills/rem-reverse-engineering-marketing`](../../skills/rem-reverse-engineering-marketing) 复制到你的 Agent 技能目录（Claude Code 是 `~/.claude/skills/`）。
 
-REM 需要在 Agent 里接入两个连接器：
-
-* **[Monid](https://monid.ai)**：拉取社媒数据（X、Instagram、TikTok、YouTube、LinkedIn、Threads、Facebook）
-* **[Exa](https://exa.ai)**：查找官方账号
+REM 只需要在 Agent 里接入一个连接器：**[Monid](https://monid.ai)**。它用网页搜索查找官方账号，并拉取社媒数据（X、Instagram、TikTok、YouTube、LinkedIn、Threads、Facebook）。
 
 ### 直接对 Agent 说
 
@@ -68,14 +65,14 @@ REM @rowancheung
 
 ```mermaid
 flowchart LR
-    A["你：REM @handle"] --> B["查找官方账号<br/>（Exa）"]
+    A["你：REM @handle"] --> B["查找官方账号<br/>（Monid 网页搜索）"]
     B --> C["拉取 31 天内容<br/>（Monid）"]
     C --> D["按内容类型分类<br/>并拆解每条文案"]
     D --> E["分析频率、时间、<br/>触达、跨平台分发"]
     E --> F["生成一个可交互页面<br/>REM: Name Social Playbook"]
 ```
 
-1. **找账号。** 用 Exa 找官方账号（公司官网一般在 `sameAs` 里列出；个人一般写在个人网站或 LinkedIn 上）。
+1. **找账号。** 用 Monid 网页搜索（search1api `/search`）找官方账号（公司官网一般在 `sameAs` 里列出；个人一般写在个人网站或 LinkedIn 上）。
 2. **拉数据。** Monid 接口返回每个平台的内容、时间和数据。一次完整分析的数据费用远低于 1 美元。
 3. **打标签。** 每条内容归入一个类型，文案用 [`caption_labeler.py`](../../skills/rem-reverse-engineering-marketing/scripts/caption_labeler.py) 拆成几个部分。
 4. **分析。** 每天发几条、太平洋时间的高峰时段、每类内容的平均和中位数触达、同一条内容在各平台的发布时间差、链接放在哪里、付费合作标签。
@@ -145,7 +142,7 @@ X、Instagram、YouTube、LinkedIn 和 TikTok 创作者共 171 条内容。X 上
 <details>
 <summary><strong>哪些 Agent 可以用 REM？</strong></summary>
 
-任何支持技能、并能调用 Monid 和 Exa 的 Agent，比如接入了这两个连接器的 Claude（Cowork、Claude Code）。发布页面用的是 Claude Artifacts；其他 Agent 可以直接保存 HTML 文件。
+任何支持技能、并能调用 Monid 的 Agent，比如接入了 Monid 连接器的 Claude（Cowork、Claude Code）。发布页面用的是 Claude Artifacts；其他 Agent 可以直接保存 HTML 文件。
 
 </details>
 

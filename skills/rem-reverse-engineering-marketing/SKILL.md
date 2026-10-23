@@ -9,7 +9,7 @@ Input: one person or company (name or handle). Output: one published HTML Artifa
 
 House rules for every REM run
 
-* Use Exa for web search and Monid for all social data (X included).
+* Use Monid for everything: web search and all social data (X included). Do not use other search tools.
 * No hyphen character anywhere in visible output (page text, recipe text, chat reply). Replace hyphens in quoted post text with spaces; keep them only inside URLs and code.
 * Cite the source for every number (Monid provider + endpoint, pull date). Show calculation steps in the chat reply when you compute a rate or ratio (example: 22 videos ÷ 31 days = 0.71 per day).
 * Text on the page is large (body 19px).
@@ -18,7 +18,7 @@ House rules for every REM run
 
 ## Step 1: Find the official handles
 
-Search with Exa for the target's official accounts (company sites often list them in JSON LD `sameAs`; people list them on a personal site or LinkedIn). Collect: X, Instagram, TikTok, YouTube, LinkedIn (company or /in/ profile), Threads, Facebook. Check Monid balance (`monid_balance`).
+Search the web through Monid for the target's official accounts: `monid_inspect` then `monid_run` on search1api `/search` (query like "[Name] official X Instagram TikTok YouTube LinkedIn"), and scrape the official site with context.dev `/web/scrape/markdown` when you need its `sameAs` list (company sites often list them in JSON LD `sameAs`; people list them on a personal site or LinkedIn). Collect: X, Instagram, TikTok, YouTube, LinkedIn (company or /in/ profile), Threads, Facebook. Check Monid balance (`monid_balance`).
 
 ## Step 2: Pull the month with Monid
 

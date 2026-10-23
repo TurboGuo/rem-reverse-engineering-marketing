@@ -47,10 +47,7 @@ npx skills add TurboGuo/rem-reverse-engineering-marketing
 
 Or copy [`skills/rem-reverse-engineering-marketing`](skills/rem-reverse-engineering-marketing) into your agent's skills folder (for Claude Code: `~/.claude/skills/`).
 
-REM needs two connectors in your agent:
-
-* **[Monid](https://monid.ai)** for the social data (X, Instagram, TikTok, YouTube, LinkedIn, Threads, Facebook)
-* **[Exa](https://exa.ai)** to find the official accounts
+REM needs one connector in your agent: **[Monid](https://monid.ai)**. It finds the official accounts with web search and pulls the social data (X, Instagram, TikTok, YouTube, LinkedIn, Threads, Facebook).
 
 ### Ask your agent
 
@@ -68,14 +65,14 @@ Replace the name with any person or company.
 
 ```mermaid
 flowchart LR
-    A["You: REM @handle"] --> B["Find official accounts<br/>(Exa)"]
+    A["You: REM @handle"] --> B["Find official accounts<br/>(Monid web search)"]
     B --> C["Pull 31 days of posts<br/>(Monid)"]
     C --> D["Classify by content type<br/>and label each caption"]
     D --> E["Analyze cadence, timing,<br/>reach, cross posting"]
     E --> F["Publish one interactive page<br/>REM: Name Social Playbook"]
 ```
 
-1. **Find the accounts.** Exa finds the official handles (company sites usually list them in `sameAs`; people list them on a personal site or LinkedIn).
+1. **Find the accounts.** Monid web search (search1api `/search`) finds the official handles (company sites usually list them in `sameAs`; people list them on a personal site or LinkedIn).
 2. **Pull the month.** Monid endpoints return posts, timestamps and metrics for every platform. A full run has cost well under $1.
 3. **Label.** Each post gets a content type, and its caption is split into parts with [`caption_labeler.py`](skills/rem-reverse-engineering-marketing/scripts/caption_labeler.py).
 4. **Analyze.** Posts per day, peak hours in PT, average and median reach per type, the same post across platforms, where the link lives, paid partner tags.
@@ -147,7 +144,7 @@ Only 3 original X posts in a month, but a copy and paste list of Grok Bot routin
 <details>
 <summary><strong>Which agents can use REM?</strong></summary>
 
-Any agent that supports skills and can call Monid and Exa as tools, such as Claude (Cowork, Claude Code) with those connectors added. Publishing the page uses Claude Artifacts; other agents can save the HTML file instead.
+Any agent that supports skills and can call Monid as a tool, such as Claude (Cowork, Claude Code) with the Monid connector added. Publishing the page uses Claude Artifacts; other agents can save the HTML file instead.
 
 </details>
 
