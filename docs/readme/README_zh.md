@@ -15,7 +15,7 @@
 
 [快速开始](#快速开始) · [工作原理](#工作原理) · [输出内容](#输出内容) · [可以分析什么](#可以分析什么) · [案例](#案例) · [常见问题](#常见问题) · [文档](#文档)
 
-<code>npx skills add TurboGuo/rem-reverse-engineering-marketing</code>
+**设置：** 接入 [Monid MCP](https://monid.ai/docs/guide/quickstart-mcp)，然后把 [技能文件](https://github.com/TurboGuo/rem-reverse-engineering-marketing/blob/main/skills/rem-reverse-engineering-marketing/SKILL.md) 发给你的 Agent
 
 </div>
 
@@ -37,17 +37,17 @@
 
 ## 快速开始
 
-### 安装技能
+### 1. 接入 Monid MCP
 
-装好 Node.js 后运行：
+REM 的所有数据都来自 Monid。请自行在你的 Agent 里安装 [Monid MCP](https://monid.ai/docs/guide/quickstart-mcp)。
 
-```bash
-npx skills add TurboGuo/rem-reverse-engineering-marketing
+### 2. 把技能发给 Agent
+
+把这个链接粘贴给你的 Agent，让它使用或安装这个技能：
+
+```text
+https://github.com/TurboGuo/rem-reverse-engineering-marketing/blob/main/skills/rem-reverse-engineering-marketing/SKILL.md
 ```
-
-也可以直接把 [`skills/rem-reverse-engineering-marketing`](../../skills/rem-reverse-engineering-marketing) 复制到你的 Agent 技能目录（Claude Code 是 `~/.claude/skills/`）。
-
-REM 只需要在 Agent 里接入一个连接器：**[Monid](https://monid.ai)**。它用网页搜索查找官方账号，并拉取社媒数据（X、Instagram、TikTok、YouTube、LinkedIn、Threads、Facebook）。
 
 ### 直接对 Agent 说
 
@@ -93,8 +93,26 @@ flowchart LR
 <img src="../assets/higgsfield-one-day.png" alt="一天视图：按小时和平台排列，每格显示发了几条、什么类型" width="900" />
 <br /><sub>Higgsfield 的一天：把一个月折叠成一天</sub>
 <br /><br />
-<img src="../assets/higgsfield-recipe.png" alt="左边是可点击的内容类型，右边是一条真实的 X 帖子，拆成钩子、价值句、福利、获取方式、创作者署名和自回复" width="900" />
-<br /><sub>点一个内容类型，就能看到一条真实内容被拆成几个部分</sub>
+<img src="../assets/higgsfield-week.png" alt="平均一周：周一到周日，每天列出固定时段、平台、出现次数和内容类型" width="900" />
+<br /><sub>平均一周：每个工作日的固定发布时段</sub>
+<br /><br />
+<img src="../assets/higgsfield-playbook.png" alt="整体打法：每个平台每天发几条、高峰时间" width="900" />
+<br /><sub>整体打法：每个平台发多少、什么时候发</sub>
+<br /><br />
+<img src="../assets/higgsfield-themes.png" alt="八个主题卡片，每个都有真实例子和数据" width="900" />
+<br /><sub>内容主题：每个主题都有数据支撑</sub>
+<br /><br />
+<img src="../assets/higgsfield-when.png" alt="每个平台按太平洋时间小时统计的发帖热力图" width="900" />
+<br /><sub>发布时间：每个平台按小时统计</sub>
+<br /><br />
+<img src="../assets/higgsfield-recipe.png" alt="X 标签页：左边是可点击的内容类型，右边是一条真实帖子拆成钩子、价值句、福利、获取方式、创作者署名和自回复" width="900" />
+<br /><sub>分平台拆解：点一个内容类型，看一条真实内容被拆成几个部分</sub>
+<br /><br />
+<img src="../assets/higgsfield-video-prompt.png" alt="可复制的 AI 视频提示词：画幅、分镜时长、风格和声音" width="500" />
+<br /><sub>每种内容类型都有可直接复制的同类视频提示词</sub>
+<br /><br />
+<img src="../assets/higgsfield-calendar.png" alt="Higgsfield 每条内容按类型着色的月历，可按平台和类型筛选" width="900" />
+<br /><sub>内容日历：一个月的每条内容，按类型着色</sub>
 </div>
 
 ## 可以分析什么
@@ -118,10 +136,6 @@ flowchart LR
 X、Instagram、YouTube、LinkedIn 和 TikTok 创作者共 171 条内容。X 上自家产品发布平均 232 万浏览，大约是小功能更新的 28 倍（2,317,034 ÷ 83,781 = 27.7）。47 条 Instagram Reels 里有 44 条用了"评论关键词领链接"。官方 TikTok 停更，但带 Higgsfield 标签的前 19 条创作者视频合计 5,030 万播放。
 
 [打开页面](../../examples/higgsfield/index.html)
-
-<div align="center">
-<img src="../assets/higgsfield-calendar.png" alt="Higgsfield 每条内容按类型着色的月历" width="900" />
-</div>
 
 ### Rowan Cheung：三条帖子顶三十条
 

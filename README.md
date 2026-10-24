@@ -15,7 +15,7 @@
 
 [Quick start](#quick-start) · [How REM works](#how-rem-works) · [What you get](#what-you-get) · [What you can analyze](#what-you-can-analyze) · [Showcases](#showcases) · [FAQ](#faq) · [Documentation](#documentation)
 
-<code>npx skills add TurboGuo/rem-reverse-engineering-marketing</code>
+**Setup:** add the [Monid MCP](https://monid.ai/docs/guide/quickstart-mcp), then give your agent the [skill file](https://github.com/TurboGuo/rem-reverse-engineering-marketing/blob/main/skills/rem-reverse-engineering-marketing/SKILL.md)
 
 </div>
 
@@ -37,17 +37,17 @@ Every recipe on the page is a real post from the target, not a fill in the blank
 
 ## Quick start
 
-### Install the skill
+### 1. Add the Monid MCP
 
-With Node.js installed, run:
+REM gets all its data from Monid. Install the [Monid MCP](https://monid.ai/docs/guide/quickstart-mcp) in your agent yourself.
 
-```bash
-npx skills add TurboGuo/rem-reverse-engineering-marketing
+### 2. Give your agent the skill
+
+Paste this link into your agent and ask it to use or install the skill:
+
+```text
+https://github.com/TurboGuo/rem-reverse-engineering-marketing/blob/main/skills/rem-reverse-engineering-marketing/SKILL.md
 ```
-
-Or copy [`skills/rem-reverse-engineering-marketing`](skills/rem-reverse-engineering-marketing) into your agent's skills folder (for Claude Code: `~/.claude/skills/`).
-
-REM needs one connector in your agent: **[Monid](https://monid.ai)**. It finds the official accounts with web search and pulls the social data (X, Instagram, TikTok, YouTube, LinkedIn, Threads, Facebook).
 
 ### Ask your agent
 
@@ -93,8 +93,26 @@ flowchart LR
 <img src="docs/assets/higgsfield-one-day.png" alt="One day view: hour rows by platform columns, each block showing how many posts and what type" width="900" />
 <br /><sub>One day at Higgsfield: the month folded into a single day</sub>
 <br /><br />
-<img src="docs/assets/higgsfield-recipe.png" alt="Clickable content types on the left; on the right a real X post split into hook, value line, offer, availability, creator credit and self reply" width="900" />
-<br /><sub>Click a content type, see a real post broken into labeled parts</sub>
+<img src="docs/assets/higgsfield-week.png" alt="Average week: Mon to Sun columns listing each day's regular slots with hour, platform, how often and post type" width="900" />
+<br /><sub>An average week: the regular slots for each weekday</sub>
+<br /><br />
+<img src="docs/assets/higgsfield-playbook.png" alt="Overall playbook: posts per day and peak hours for each platform" width="900" />
+<br /><sub>The overall playbook: how often and when each platform posts</sub>
+<br /><br />
+<img src="docs/assets/higgsfield-themes.png" alt="Eight theme cards, each with a real example and a number" width="900" />
+<br /><sub>What they post about: the themes, each backed by a number</sub>
+<br /><br />
+<img src="docs/assets/higgsfield-when.png" alt="Heatmap of posts per PT hour for each platform" width="900" />
+<br /><sub>When they post: posts per hour of day, by platform</sub>
+<br /><br />
+<img src="docs/assets/higgsfield-recipe.png" alt="X tab: content types as clickable bars on the left; on the right a real post split into hook, value line, offer, availability, creator credit and self reply" width="900" />
+<br /><sub>Platform by platform: click a content type, see a real post broken into labeled parts</sub>
+<br /><br />
+<img src="docs/assets/higgsfield-video-prompt.png" alt="A copyable shot list prompt for an AI video tool, with aspect ratio, timed shots, style and sound" width="500" />
+<br /><sub>A copyable prompt to make that kind of video, for every content type</sub>
+<br /><br />
+<img src="docs/assets/higgsfield-calendar.png" alt="Month calendar with every Higgsfield post colored by type, with platform and type filters" width="900" />
+<br /><sub>Content calendar: every post of the month, colored by type</sub>
 </div>
 
 <a id="what-you-can-analyze"></a>
@@ -120,10 +138,6 @@ See [Monid endpoints](docs/monid-endpoints.md) for inputs and known quirks.
 171 posts across X, Instagram, YouTube, LinkedIn and TikTok creators. Own product launches averaged 2.32M views on X, about 28 times more than small feature drops (2,317,034 ÷ 83,781 = 27.7). 44 of 47 Instagram reels use a "Comment KEYWORD" call to action. The official TikTok was idle, while the top 19 creator videos tagged Higgsfield reached 50.3M views.
 
 [Open the page](examples/higgsfield/index.html)
-
-<div align="center">
-<img src="docs/assets/higgsfield-calendar.png" alt="Month calendar with every Higgsfield post colored by type" width="900" />
-</div>
 
 ### Rowan Cheung: three posts that do the work of thirty
 
