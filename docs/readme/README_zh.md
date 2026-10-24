@@ -135,13 +135,9 @@ flowchart LR
 
 X、Instagram、YouTube、LinkedIn 和 TikTok 创作者共 171 条内容。X 上自家产品发布平均 232 万浏览，大约是小功能更新的 28 倍（2,317,034 ÷ 83,781 = 27.7）。47 条 Instagram Reels 里有 44 条用了"评论关键词领链接"。官方 TikTok 停更，但带 Higgsfield 标签的前 19 条创作者视频合计 5,030 万播放。
 
-[打开页面](../../examples/higgsfield/index.html)
-
 ### Rowan Cheung：三条帖子顶三十条
 
 一个月只发了 3 条 X 原创，但一条"可直接复制的 Grok Bot 用法清单"拿到 657,263 浏览，收藏比点赞还多（3,162 ÷ 2,610 = 每个赞对应 1.21 次收藏）。TikTok 每个工作日发一条科学和机器人科普；LinkedIn 承载付费合作的发布内容。
-
-[打开页面](../../examples/rowan-cheung/index.html)（使用第一版页面布局）
 
 <div align="center">
 <img src="../assets/rowan-recipe.png" alt="Rowan Cheung 的 Grok Bot 帖子被拆成钩子、时机、承诺、用法、完整提示词" width="900" />
