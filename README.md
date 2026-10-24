@@ -137,13 +137,9 @@ See [Monid endpoints](docs/monid-endpoints.md) for inputs and known quirks.
 
 171 posts across X, Instagram, YouTube, LinkedIn and TikTok creators. Own product launches averaged 2.32M views on X, about 28 times more than small feature drops (2,317,034 ÷ 83,781 = 27.7). 44 of 47 Instagram reels use a "Comment KEYWORD" call to action. The official TikTok was idle, while the top 19 creator videos tagged Higgsfield reached 50.3M views.
 
-[Open the page](examples/higgsfield/index.html)
-
 ### Rowan Cheung: three posts that do the work of thirty
 
 Only 3 original X posts in a month, but a copy and paste list of Grok Bot routines reached 657,263 views with more bookmarks than likes (3,162 ÷ 2,610 = 1.21 saves per like). TikTok runs a science and robotics explainer every weekday; LinkedIn carries paid launch posts.
-
-[Open the page](examples/rowan-cheung/index.html) (made with the first version of the layout)
 
 <div align="center">
 <img src="docs/assets/rowan-recipe.png" alt="Rowan Cheung's Grok Bot post split into hook, why now, promise, routine, full prompt" width="900" />
