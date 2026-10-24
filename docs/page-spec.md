@@ -10,42 +10,44 @@ Eyebrow "Reverse engineered marketing · Teardown no. N", the title, a 3 to 4 se
 
 The whole month folded into one day. Rows are hours (PT), columns are platforms. Each block shows how many posts went out in that hour and the most common type, colored by type, solid when the count is high. For busy accounts show only slots with 2 or more posts and drop empty hours; for sparse accounts show single posts and say so.
 
-## 3. Content calendar
+## 3. An average week at [Name]
 
-A five week Sunday to Saturday grid. Each post is a chip with platform, time and a two line title, colored by type and linked to the post. Filter buttons for platforms and types show counts. On phones the grid becomes an agenda list.
+The month folded into one week. Seven columns, Mon to Sun. Each column lists that weekday's regular slots: the hour (PT), the platform (colored, with a legend), how often it happened ("3 of 5 Weds") and the usual post type. A slot counts as regular when the same platform posted in the same hour on at least two different dates of that weekday. Each day header shows posts per day:
+
+```text
+posts on that weekday ÷ number of that weekday in the window
+```
+
+Posts that are not the target's own (for example creator videos) are left out.
 
 ## 4. The overall playbook
 
-Number tiles first: posts per day per platform, a green peak time line and a one line note; inactive platforms in amber. Then a table: Platform, Main topics, Call to action.
+Number tiles only: posts per day per platform, a green peak time line and a one line note; inactive platforms in amber.
 
 ## 5. What they post about
 
 Six to eight theme cards. Each one has a real example and a real number.
 
-## 6. One post, every surface
-
-Three or four posts traced across platforms with PT timestamps, to show how close together they go out.
-
-## 7. When they post (optional)
+## 6. When they post (optional)
 
 A heatmap of posts per PT hour per platform.
 
-## 8. Platform by platform
+## 7. Platform by platform
 
 One tab per platform:
 
 * **Facts row**: format, cadence, peak time, call to action.
 * **What reached the most people**: a bar per content type with its average metric. Bars are buttons with a "Click any bar to open its recipe" hint, a › arrow and a selected state.
 * **Recipe**: a strip of numbered colored part pills, then a post card of the best real post of that type. Each part is a colored block with a label, a one line hint and the real text. The media block links to the real post. Real metrics and a Copy text button sit at the bottom.
-* **Top posts** table.
-* **Content breakdown**: every post, newest first, as expandable cards. Inside: when, format and length, hook, structure as numbered pills, source of information, what to learn, and a link. An Expand all button opens every card.
+* **Prompt to make this kind of video**: a copyable shot list for an AI video tool that changes with the clicked type. It gives the aspect ratio (16:9 for X, LinkedIn and YouTube long; 9:16 for Reels, Shorts and TikTok), length, each shot with timing, style, sound, and the caption or title pattern for that platform. Words in [CAPS] are the slots to replace.
+* **Platform notes** and a **Top posts** table.
 
-The page says plainly that video structure is read from captions, and says when a caption names no source.
+The page says plainly that video structure is read from captions, not from watching the videos.
 
-## 9. Copy it
+## 8. Content calendar
 
-A weekly plan scaled for a small team or a solo creator (labeled as an adaptation, not their data), a checklist and a list of what not to copy.
+The last section. A five week Sunday to Saturday grid. Each post is a chip with platform, time and a two line title, colored by type and linked to the post. Filter buttons for platforms and types show counts. On phones the grid becomes an agenda list.
 
 ## Not on the page
 
-No calculations section. Sources sit under each block, and calculation steps go in the chat reply.
+No "One post, every surface" table, no topics table, no per post content breakdown, no "Copy it" weekly plan and no calculations section. Sources sit under each block, and calculation steps go in the chat reply.

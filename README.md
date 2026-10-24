@@ -33,7 +33,7 @@
 
 See a brand growing fast on social and want to know exactly what they do? Ask your agent to run REM on them. It pulls every post from the last 31 days on every platform, sorts the posts into content types, breaks each post into its parts (hook, proof, offer, call to action), and publishes one interactive page that shows how much they post, when, what about, and how each kind of post is built.
 
-Every recipe on the page is a real post from the target, not a fill in the blanks template. Every number comes with its source.
+Every recipe on the page is a real post from the target, not a fill in the blanks template, and each one comes with a prompt you can paste into an AI video tool to make that kind of video. Every number comes with its source.
 
 ## Quick start
 
@@ -83,12 +83,11 @@ flowchart LR
 | Section | What it shows |
 | --- | --- |
 | One day at [Name] | The whole month folded into one day: which hours each platform posts in, and what it mostly posts then |
-| Content calendar | Every post on a month grid, colored by type, with platform and type filters |
-| The overall playbook | Posts per day per platform, peak times, main topics and calls to action |
+| An average week | Mon to Sun: each day's regular slots, with the hour, the platform, how often it happened and the usual post type |
+| The overall playbook | Posts per day per platform, peak times and a one line note |
 | What they post about | 6 to 8 themes, each backed by a number |
-| One post, every surface | The same post traced across platforms, down to the minute |
-| Platform by platform | Clickable content types; each opens a real post split into labeled parts, plus top posts and a breakdown of every post (topic, hook, structure, source, when posted) |
-| Copy it | A weekly plan scaled for a small team, a checklist, and what not to copy |
+| Platform by platform | Clickable content types; each opens a real post split into labeled parts, plus a copyable prompt to make that kind of video, platform notes and top posts |
+| Content calendar | Every post on a month grid, colored by type, with platform and type filters |
 
 <div align="center">
 <img src="docs/assets/higgsfield-one-day.png" alt="One day view: hour rows by platform columns, each block showing how many posts and what type" width="900" />
@@ -130,7 +129,7 @@ See [Monid endpoints](docs/monid-endpoints.md) for inputs and known quirks.
 
 Only 3 original X posts in a month, but a copy and paste list of Grok Bot routines reached 657,263 views with more bookmarks than likes (3,162 ÷ 2,610 = 1.21 saves per like). TikTok runs a science and robotics explainer every weekday; LinkedIn carries paid launch posts.
 
-[Open the page](examples/rowan-cheung/index.html)
+[Open the page](examples/rowan-cheung/index.html) (made with the first version of the layout)
 
 <div align="center">
 <img src="docs/assets/rowan-recipe.png" alt="Rowan Cheung's Grok Bot post split into hook, why now, promise, routine, full prompt" width="900" />

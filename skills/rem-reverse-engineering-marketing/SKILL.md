@@ -14,7 +14,7 @@ House rules for every REM run
 * Cite the source for every number (Monid provider + endpoint, pull date). Show calculation steps in the chat reply when you compute a rate or ratio (example: 22 videos ÷ 31 days = 0.71 per day).
 * Text on the page is large (body 19px).
 * Window = the 31 days ending today. Times shown in Pacific Time (PT).
-* Never show placeholder templates like [Product] or angle bracket slots. Every recipe is a real post broken into labeled parts.
+* Never show placeholder templates like [Product] or angle bracket slots in recipes. Every recipe is a real post broken into labeled parts. The only place [CAPS] slots are allowed is the "Prompt to make this kind of video" box, which says to replace them.
 
 ## Step 1: Find the official handles
 
@@ -56,17 +56,22 @@ Run the Artifact quickstart once (intent other) and follow its page contract (co
 
 1. **Header**: eyebrow "Reverse engineered marketing · Teardown no. N", H1 "REM: [Name] Social Playbook", a 3 to 4 sentence thesis with one highlighted phrase, a slate (window, accounts, posts read, PT), and a source line listing every Monid endpoint used.
 2. **One day at [Name]**: the month folded into one day. Grid of hour rows by platform columns; a block per hour slot showing count and main type, colored by type, solid when the count is high. For busy accounts show only slots with 2+ posts and drop empty hours (single faded blocks looked empty to the user); for sparse accounts show single posts too and say so.
-3. **Content calendar**: 5 week Sun to Sat grid covering the window; each post is a chip (platform, time, 2 line title) colored by type and linking to the post; filter buttons for platforms and types with counts; on phones switch to an agenda list.
-4. **The overall playbook**: number tiles first (rate per platform, a green peak time line, one line note, inactive platforms in amber), then a table Platform / Main topics / Call to action.
-5. **What they post about**: 6 to 8 theme cards, each with a real number.
-6. **One post, every surface**: table of 3 to 4 posts traced across platforms with PT timestamps.
-7. **When they post**: optional heatmap of posts per PT hour per platform.
-8. **Platform by platform** tabs. Each tab: a facts row (format, cadence, peak time, call to action). Left column "What reached the most people" with a green "👉 Click any bar to open its recipe" hint and clickable bar buttons per type (bordered, › arrow, selected state). Right column is the recipe: a strip of numbered colored part pills, then a post card of the best real post of that type (avatar, name, handle, PT time, platform tag, each part as a colored block with label, one line hint and the real text, a dark media block that links to the real post as "Watch on X ↗", real metrics, Copy text button), then "Open the real post". Below: a Top posts table and a **Content breakdown**: every post newest first as expandable cards with type pill, topic and metric; inside: When, Format and length, Hook (first line or title), Structure (numbered pills), Source of information, What to learn (top and bottom performers, notable ratios), Open the post. Add an Expand all button. Say plainly that video structure is read from captions because the videos were not watched, and say when a caption names no source.
-9. **Copy it**: a scaled week for a small team or solo creator (labeled as your adaptation), a checklist, and what not to copy.
+3. **An average week at [Name]**: seven columns, Mon to Sun. Each column lists the regular slots for that weekday, sorted by hour: hour (PT), platform (colored by platform, with a legend), "N of M [weekday]s" and the usual post type. A slot is regular when the same platform posted in the same hour on at least 2 different dates of that weekday. The day header shows posts per day = posts on that weekday ÷ how many of that weekday fell in the window (state which weekdays occur 5 times). Leave out posts that are not the target's own (for example TikTok creator videos) and say so in the source line.
+4. **The overall playbook**: number tiles only: rate per platform, a green peak time line, a one line note, inactive platforms in amber. No topics or call to action table (the user removed it).
+5. **What they post about**: 6 to 8 theme cards, each with a real example and a real number.
+6. **When they post**: optional heatmap of posts per PT hour per platform.
+7. **Platform by platform** tabs. Each tab:
+   * Facts row (format, cadence, peak time, call to action).
+   * Left column "What reached the most people": a green "👉 Click any bar to open its recipe" hint and clickable bar buttons per type (bordered, › arrow, selected state).
+   * Right column, the recipe: a strip of numbered colored part pills, then a post card of the best real post of that type (avatar, name, PT time, platform tag, each part as a colored block with label, one line hint and the real text, a dark media block that links to the real post as "Watch on X ↗", real metrics, Copy text button), then "Open the real post".
+   * Under the recipe, **Prompt to make this kind of video**: a copyable prompt that changes with the clicked type, one per type on every platform. Write it as a shot list for an AI video tool: aspect ratio and format for that platform (16:9 for X, LinkedIn and YouTube long; 9:16 for Reels, Shorts and TikTok), length, each shot with its timing and what is on screen, style, sound, and the caption or title pattern that goes with it (keyword call to action on Instagram, title, thumbnail and description lines on YouTube, business framing on LinkedIn). Base it on the real posts of that type and note that videos were read from captions, not watched.
+   * A short notes block on what is special about the platform (for example the Comment KEYWORD engine), then a Top posts table.
+   * No static caption or title template boxes and no per post Content breakdown (the user removed both).
+8. **Content calendar** (last section): a 5 week Sun to Sat grid covering the window; each post is a chip (platform, time, 2 line title) colored by type and linking to the post; filter buttons for platforms and types with counts; on phones switch to an agenda list.
 
-No "How the numbers were calculated" section on the page (the user removed it); keep source lines under each block and put calculation steps in the chat reply.
+Not on the page (the user removed them): "One post, every surface", "Copy it" weekly plan, "How the numbers were calculated", the topics table, Content breakdown. Keep source lines under each block and put calculation steps in the chat reply. Cross platform timing findings can go in the thesis or theme cards.
 
-Before publishing: syntax check the script, render once with Playwright (Chromium at /opt/pw-browsers) and look at the one day view, the calendar and one tab; scan visible text for hyphens. Publish with the Artifact tool, icon "megaphone".
+Before publishing: syntax check the script, render once with Playwright and check the one day view, the average week, one tab (click every bar and confirm a prompt shows) and the calendar; check for page errors; scan visible text for hyphens. Publish with the Artifact tool, icon "megaphone". When updating a page published in an earlier conversation (or before a context reset), publish to its url after reading it, or the tool creates a separate artifact.
 
 ## Step 6: Reply in chat
 
